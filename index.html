@@ -4734,7 +4734,7 @@ function renderMapFittings(){
  $('#diagram').insertAdjacentHTML('beforeend',svg);
 }
 function renderConnectedNetwork(){
- const braking=system==='braking',fuel=system==='fuel',spread=1.25,spreadX=x=>Math.round(x*spread*10)/10,width=(braking?4700:fuel?5600:2860)*spread,height=braking?1680:fuel?3050:2150,cardW=195,cardH=230,step=fuel?250:210,locations={};networkBounds=[0,0,width,height];
+ const braking=system==='braking',fuel=system==='fuel',spread=1.25,spreadX=x=>Math.round(x*spread*10)/10,width=(braking?4700:fuel?6600:2860)*spread,height=braking?1680:fuel?4800:2150,cardW=195,cardH=230,step=fuel?250:210,locations={};networkBounds=[0,0,width,height];
  const colors=braking?{front:'#c65747',rear:'#437bb0',clutch:'#6a759b'}:fuel?{lift:'#3a83b6',pressure:'#c55b43',return:'#8b6ab5',overflow:'#d18c3a',crossover:'#729659',sensor:'#9b7667',seal:'#7b8790'}:{hot:'#cd5b43',cold:'#317bb6',tank:'#31957d',steam:'#8a6ab6',overflow:'#df862e',other:'#8a9aa2'};
  let cards='',edges='',labels='',ports='';
  const point=(x,y)=>({x,y,w:cardW,h:cardH});
@@ -4761,58 +4761,48 @@ function renderConnectedNetwork(){
   const run=(id,indexes,x,y,dx,color)=>{const pieces=indexes.map((i,j)=>addPiece(id,i,x+j*dx,y,color));for(let j=1;j<pieces.length;j++)arrow(pieces[j-1],pieces[j],color);return pieces;};
   const route=(d,key)=>{edges+=`<path d="${d}" class="network-flow" stroke="${colors[key]}" marker-end="url(#network-arrow-${key})"/>`;};
   const port=(x,y,key,name,labelX,labelY,anchor='start')=>{ports+=`<circle data-surge-port="${name}" cx="${x}" cy="${y}" r="6" fill="#fff" stroke="${colors[key]}" stroke-width="3"/><text x="${labelX}" y="${labelY}" text-anchor="${anchor}" style="font:700 12px 'Segoe UI',Arial;fill:${colors[key]};paint-order:stroke;stroke:#fff;stroke-width:4px;stroke-linejoin:round">${name}</text>`;};
-  const liftA=addMajor('FTD',55,150,colors.lift),hatA=addMajor('FHTD',275,150,colors.lift);
-  const liftB=addMajor('FTP',55,470,colors.lift),hatB=addMajor('FHTP',275,470,colors.lift);
-  const surge=addMajor('FSUR',2860,310,colors.lift);
-  zone(150,'LIFT PUMP / ONE FUEL TANK → SURGE SUPPLY');
-  zone(470,'LIFT PUMP / OTHER FUEL TANK → REPURPOSED SURGE OUTLET2 INLET');
-  arrow(liftA,hatA,colors.lift);arrow(liftB,hatB,colors.lift);
-  const feedA=run('F01',[0,1,2,3,4,5,6,7,8],520,150,250,colors.lift);
-  const feedB=run('F02',[0,1,2,3,4,5,6,7,8],520,470,250,colors.lift);
-  arrow(hatA,feedA[0],colors.lift);
-  arrow(hatB,feedB[0],colors.lift);
-  const supplyY=surge.y+55,outlet2Y=surge.y+135,outlet1Y=surge.y+95;
-  route(`M${feedA.at(-1).x+cardW} ${feedA.at(-1).y+cardH/2} H${surge.x-125} V${supplyY} H${surge.x}`,'lift');
-  route(`M${feedB.at(-1).x+cardW} ${feedB.at(-1).y+cardH/2} H${surge.x-85} V${outlet2Y} H${surge.x}`,'lift');
-
-  zone(790,'SURGE DW200 → FILTER → MALLORY REGULATOR',spreadX(3080));
-  const pressureIn=run('F03',[0,1,2,3,4,5,6,7,8],3080,790,250,colors.pressure);
-  const pressureOut=run('F03',[9,10,11,12,13],5080,1120,-250,colors.pressure);
-  const regulator=addMajor('FREG',3800,1120,colors.pressure);
-  route(`M${surge.x+cardW} ${outlet1Y} H${surge.x+cardW+40} V${pressureIn[0].y+cardH/2} H${pressureIn[0].x}`,'pressure');
-  edges+=`<path d="M${pressureIn.at(-1).x+cardW/2} ${pressureIn.at(-1).y+cardH} V${pressureOut[0].y}" class="network-flow" stroke="${colors.pressure}" marker-end="url(#network-arrow-pressure)"/>`;
-  arrow(pressureOut.at(-1),regulator,colors.pressure);
-
-  zone(1430,'REGULATED FEED → STOCK RETURNLESS LS3 RAIL',spreadX(4050));
-  const railFeed=run('F04',[0,1,2,3,4],4050,1430,250,colors.pressure);
-  const rail=addMajor('FRAIL',5300,1430,colors.pressure);
-  arrow(regulator,railFeed[0],colors.pressure);arrow(railFeed.at(-1),rail,colors.pressure);
-
-  zone(1730,'REGULATOR BYPASS → SURGE RETURN',spreadX(2600));
-  const bypass=run('F05',[0,1,2,3,4],3600,1730,-250,colors.return);
-  arrow(regulator,bypass[0],colors.return);
-  route(`M${bypass.at(-1).x+cardW} ${bypass.at(-1).y+cardH/2} H${surge.x-65} V${surge.y+cardH+40} H${surge.x+45} V${surge.y+cardH}`,'return');
-
-  zone(2050,'SURGE OVERFLOW → ONE FUEL TANK',spreadX(1330));
-  const overflow=run('F06',[0,1,2,3,4,5],2580,2050,-250,colors.overflow);
-  route(`M${surge.x+155} ${surge.y+cardH} H${surge.x+cardW+5} V${overflow[0].y+cardH/2} H${overflow[0].x+cardW}`,'overflow');
-  arrow(overflow.at(-1),hatA,colors.overflow);
-  port(surge.x,supplyY,'lift','SUPPLY',surge.x-15,supplyY-13,'end');
-  port(surge.x,outlet2Y,'lift','OUTLET2 · LIFT IN',surge.x-15,outlet2Y-13,'end');
-  port(surge.x+cardW,outlet1Y,'pressure','INTERNAL → DW200 SOCK',surge.x+cardW+15,outlet1Y-13);
-  port(surge.x+45,surge.y+cardH,'return','RETURN',surge.x+16,surge.y+cardH+88);
-  port(surge.x+155,surge.y+cardH,'overflow','OVERFLOW',surge.x+130,surge.y+cardH+88);
-
-  zone(2390,'-10 TANK CROSSOVER',spreadX(250));
-  const crossover=run('F07',[0,1,2,3,4,5,6],250,2390,250,colors.crossover);
-  arrow(liftA,crossover[0],colors.crossover);arrow(crossover.at(-1),liftB,colors.crossover);
-
-  zone(2050,'ENGINE-MOUNTED MALLORY → FLEX HOSE → CHASSIS HALTECH SENSOR',spreadX(4050));
-  const sensor=run('F08',[0,1,2,3,4,5],4050,2050,250,colors.sensor);
-  arrow(regulator,sensor[0],colors.sensor);
-
-  zone(2710,'INDEPENDENT UNUSED PORT CLOSURES · NOT A FLOW PATH',spreadX(520));
-  run('F09',[0,1,2,3,4,5,6,7,8,9],520,2710,250,colors.seal);
+  const pitch=360,col=i=>65+i*pitch;
+  const row=(id,start,end,column,y,dir,key)=>run(id,Array.from({length:end-start+1},(_,i)=>start+i),col(column),y,pitch*dir,colors[key]);
+  const major=(id,c,y,key)=>addMajor(id,col(c),y,colors[key]);
+  const cx=c=>c.x+cardW/2,cy=c=>c.y+cardH/2;
+  const down=(a,b,key)=>route('M'+cx(a)+' '+(a.y+cardH)+' V'+b.y,key);
+  const tankA=major('FTD',0,690,'lift'),hatA=major('FHTD',1,690,'lift');
+  const tankB=major('FTP',0,2020,'lift'),hatB=major('FHTP',1,2020,'lift');
+  const surge=major('FSUR',12,1300,'lift'),reg=major('FREG',8,3040,'pressure');
+  for(const [tank,hat,id,y,name,offset] of [[tankA,hatA,'F01',690,'SUPPLY',56],[tankB,hatB,'F02',2020,'OUTLET2 · LIFT IN',174]]){
+   zone(y,'LIFT PUMP → SURGE '+name,spreadX(col(2)));
+   const feed=row(id,0,8,2,y,1,'lift'),end=feed.at(-1),py=surge.y+offset;
+   arrow(tank,hat,colors.lift);arrow(hat,feed[0],colors.lift);
+   route('M'+(end.x+cardW)+' '+cy(end)+' H'+spreadX(col(11))+' V'+py+' H'+surge.x,'lift');
+   port(surge.x,py,'lift',name,surge.x-12,py-20,'end');
+  }
+  zone(200,'SURGE OVERFLOW → TANK HANGER',spreadX(col(1)));
+  const overflow=row('F06',0,5,6,200,-1,'overflow');
+  route('M'+cx(surge)+' '+surge.y+' V'+cy(overflow[0])+' H'+(overflow[0].x+cardW),'overflow');
+  down(overflow.at(-1),hatA,'overflow');
+  port(cx(surge),surge.y,'overflow','OVERFLOW',cx(surge)+15,surge.y-18);
+  zone(1130,'TANK CROSSOVER',spreadX(col(1)));
+  const crossA=row('F07',0,3,0,1130,1,'crossover'),crossB=row('F07',4,6,3,1570,-1,'crossover');
+  down(tankA,crossA[0],'crossover');down(crossA.at(-1),crossB[0],'crossover');
+  route('M'+crossB.at(-1).x+' '+cy(crossB[0])+' H'+cx(tankB)+' V'+tankB.y,'crossover');
+  zone(1300,'DW200 → FILTER → REGULATOR',spreadX(col(13)));
+  const upper=row('F03',0,4,13,1300,1,'pressure'),lower=row('F03',5,13,17,3040,-1,'pressure');
+  arrow(surge,upper[0],colors.pressure);down(upper.at(-1),lower[0],'pressure');arrow(lower.at(-1),reg,colors.pressure);
+  port(surge.x+cardW,cy(surge),'pressure','INTERNAL → DW200 SOCK',surge.x+cardW+15,cy(surge)-18);
+  zone(2500,'REGULATOR BYPASS → SURGE RETURN',spreadX(col(8)));
+  const bypass=row('F05',0,4,8,2500,1,'return');
+  route('M'+cx(reg)+' '+reg.y+' V'+(bypass[0].y+cardH),'return');
+  route('M'+cx(surge)+' '+bypass.at(-1).y+' V'+(surge.y+cardH),'return');
+  port(cx(surge),surge.y+cardH,'return','RETURN',cx(surge)+15,surge.y+cardH+30);
+  zone(3590,'REGULATED FEED → STOCK LS3 RAIL',spreadX(col(9)));
+  const railFeed=row('F04',0,4,9,3590,1,'pressure'),rail=major('FRAIL',14,3590,'pressure');
+  route('M'+(reg.x+150)+' '+(reg.y+cardH)+' V'+cy(rail)+' H'+railFeed[0].x,'pressure');
+  arrow(railFeed.at(-1),rail,colors.pressure);
+  zone(4040,'ENGINE-MOUNTED MALLORY → FLEX HOSE → CHASSIS HALTECH SENSOR',spreadX(col(9)));
+  const sensor=row('F08',0,5,8,4040,1,'sensor');
+  route('M'+(reg.x+45)+' '+(reg.y+cardH)+' V'+sensor[0].y,'sensor');
+  zone(4510,'INDEPENDENT UNUSED PORT CLOSURES',spreadX(col(1)));
+  row('F09',0,9,1,4510,1,'seal');
  }else{
   labels+='<text x="60" y="45" class="network-title">COOLING / COMPLETE CONNECTED SCHEMATIC</text><text x="60" y="95" class="network-zone">HOT SIDE · REAR ENGINE → FRONT RADIATOR</text><text x="60" y="565" class="network-zone">COLD RETURN · FRONT RADIATOR → REAR ENGINE</text><text x="60" y="1095" class="network-zone">EXPANSION TANK / HEATER RETURN / OVERFLOW</text><text x="60" y="1415" class="network-zone">FRONT STEAM CROSSOVER → EXPANSION TANK</text><text x="60" y="1780" class="network-zone">OTHER SEALING INTERFACES · NOT CONNECTED IN SERIES</text>';
   const pump=addMajor('W01',60,130,colors.hot),hotA=chain('L01',270,130,step,colors.hot),hotTube=addMajor('H01',1530,130,colors.hot),hotB=chain('L02',1740,130,step,colors.hot),radiator=addMajor('R01',2600,365,colors.hot);arrow(pump,hotA[0],colors.hot);arrow(hotA.at(-1),hotTube,colors.hot);arrow(hotTube,hotB[0],colors.hot);arrow(hotB.at(-1),radiator,colors.hot);
