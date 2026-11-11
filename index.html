@@ -964,14 +964,14 @@ window.FUEL_CHAINS = [
       [
         "orb",
         "Mallory upper inlet adapter",
-        "Regulator upper port × -8 AN male",
-        "One of two -8 adapters and O-rings supplied with 4305M.",
+        "-8 ORB male (3/4-16) × -8 AN male; Viton O-ring",
+        "Replacement for missing Mallory fitting. The upper regulator port is the pump inlet; order one.",
         {
-          "brand": "Mallory",
-          "sku": "4305M included",
-          "source": "https://documents.holley.com/4305m.pdf",
-          "image": "fuel-4305m.jpg",
-          "photoStatus": "Supplied fitting"
+          "brand": "Summit Racing",
+          "sku": "SUM-220165B",
+          "source": "https://www.summitracing.com/parts/sum-220165b",
+          "image": "fuel-sum-220165b.jpg",
+          "photoStatus": "Purchase replacement"
         }
       ]
     ]
@@ -1054,14 +1054,14 @@ window.FUEL_CHAINS = [
       [
         "orb",
         "Mallory bottom bypass adapter",
-        "Regulator lower port × -8 AN male",
-        "Second supplied Mallory adapter and O-ring.",
+        "-8 ORB male (3/4-16) × -8 AN male; Viton O-ring",
+        "Replacement for missing Mallory fitting. The lower regulator port is the bypass return; order one.",
         {
-          "brand": "Mallory",
-          "sku": "4305M included",
-          "source": "https://documents.holley.com/4305m.pdf",
-          "image": "fuel-4305m.jpg",
-          "photoStatus": "Supplied fitting"
+          "brand": "Summit Racing",
+          "sku": "SUM-220165B",
+          "source": "https://www.summitracing.com/parts/sum-220165b",
+          "image": "fuel-sum-220165b.jpg",
+          "photoStatus": "Purchase replacement"
         }
       ],
       [
@@ -1301,7 +1301,7 @@ window.FUEL_CHAINS = [
   ],
   [
     "F08",
-    "Regulated pressure tap → isolated Haltech sensor",
+    "Engine-mounted Mallory pressure port → chassis-mounted Haltech sensor",
     [
       [
         "port",
@@ -1345,8 +1345,8 @@ window.FUEL_CHAINS = [
       [
         "hose",
         "Haltech flexible extension",
-        "18 in · -4 AN PTFE pressure hose",
-        "One HT-039103 kit includes hose, adapters and insulated P-clamps; remote-mount sensor on chassis.",
+        "18 in · -4 AN female ends · braided stainless pressure hose",
+        "One HT-039103 kit includes hose, 1/8 NPT adapters and insulated P-clamps; anchor sensor on chassis and allow for engine motion.",
         {
           "brand": "Haltech",
           "sku": "HTH-HT-039103",
@@ -1372,7 +1372,7 @@ window.FUEL_CHAINS = [
         "sensor",
         "Haltech fuel pressure sensor",
         "1/8 in NPT male · 0–150 psi",
-        "User-selected; remote mount only. Includes 3-pin Delphi connector.",
+        "User-selected; mount to chassis. Includes 3-pin Delphi connector. Wiring project: A ground, B 5V, C signal to R3 AVI6/C15.",
         {
           "brand": "Haltech",
           "sku": "HTH-HT-010910",
@@ -2148,8 +2148,8 @@ window.FUEL_CHAINS = [
         "image": "fuel-4305m.jpg",
         "source": "https://documents.holley.com/4305m.pdf",
         "specs": {
-          "Inlet": "Upper -8 AN supplied adapter",
-          "Bypass": "Bottom -8 AN supplied adapter",
+          "Inlet": "Upper -8 ORB (3/4-16) × -8 AN; SUM-220165B",
+          "Bypass": "Bottom -8 ORB (3/4-16) × -8 AN; SUM-220165B",
           "Outlets": "Three 3/8 NPT female regulated outlets",
           "Setpoint": "30–100 psi range; set per LS3 injectors"
         },
@@ -2186,7 +2186,7 @@ window.FUEL_CHAINS = [
           "Range": "0–150 psi",
           "Mount": "Remote chassis mount via HT-039103 hose"
         },
-        "note": "Attach to regulated outlet branch through flexible kit, not directly to engine or regulator."
+        "note": "Chassis mount via flexible hose from engine-mounted Mallory regulator. Wiring project: A ground, B 5V, C signal to R3 AVI6/C15."
       }
     ],
     "lines": [
@@ -2238,7 +2238,7 @@ window.FUEL_CHAINS = [
           "Surge OUTLET1 -8 ORB",
           "Mallory upper -8 AN inlet"
         ],
-        "detail": "Single DW200, -8 PTFE, 10 µm filter with proposed supplied -8 adapters, Mallory supplied -8 inlet adapter.",
+        "detail": "Single DW200, -8 PTFE, 10 µm filter with proposed supplied -8 adapters, then purchased SUM-220165B into the Mallory upper inlet.",
         "color": "#c55b43"
       },
       {
@@ -2272,7 +2272,7 @@ window.FUEL_CHAINS = [
           "Mallory bottom -8 AN bypass",
           "Surge RETURN -8 ORB"
         ],
-        "detail": "-8 PTFE return using supplied Mallory and surge adapters.",
+        "detail": "-8 PTFE return using purchased SUM-220165B at the Mallory lower bypass and the supplied surge RETURN adapter.",
         "color": "#8b6ab5"
       },
       {
@@ -2323,7 +2323,7 @@ window.FUEL_CHAINS = [
           "Spare 3/8 NPT regulated outlet",
           "Haltech 1/8 NPT sensor"
         ],
-        "detail": "3/8 to 1/8 NPT bushing; Haltech HT-039103 -4 hose extension; remotely mounted sensor.",
+        "detail": "Engine-mounted Mallory spare 3/8 NPT regulated outlet → DER-98450 reducer → HT-039103 adapter, 18 in -4 AN braided hose and sensor adapter → chassis-mounted HT-010910. Allow for engine motion.",
         "color": "#9b7667"
       },
       {
@@ -2387,7 +2387,7 @@ window.FUEL_CHAINS = [
         1,
         "4305M; upper -8 inlet, lower -8 bypass, three 3/8 NPT regulated outlets",
         "User specified",
-        "Use supplied -8 adapters and one NPT plug",
+        "Buy two SUM-220165B -8 ORB-to-AN adapters for inlet and bypass; retain one 3/8 NPT plug",
         "FREG"
       ],
       [
@@ -2673,9 +2673,9 @@ window.FUEL_CHAINS = [
         "F-P037",
         "Mallory upper inlet adapter",
         1,
-        "Regulator upper port × -8 AN male; 4305M included",
-        "Included",
-        "One of two -8 adapters and O-rings supplied with 4305M.",
+        "-8 ORB male (3/4-16) × -8 AN male; Viton O-ring; SUM-220165B",
+        "Purchase replacement",
+        "Replacement for missing Mallory fitting. Upper port is the pump inlet; order one.",
         "F03"
       ],
       [
@@ -2727,9 +2727,9 @@ window.FUEL_CHAINS = [
         "F-P043",
         "Mallory bottom bypass adapter",
         1,
-        "Regulator lower port × -8 AN male; 4305M included",
-        "Included",
-        "Second supplied Mallory adapter and O-ring.",
+        "-8 ORB male (3/4-16) × -8 AN male; Viton O-ring; SUM-220165B",
+        "Purchase replacement",
+        "Replacement for missing Mallory fitting. Lower port is the bypass return; order one.",
         "F05"
       ],
       [
@@ -2916,9 +2916,9 @@ window.FUEL_CHAINS = [
         "F-P064",
         "Haltech flexible extension",
         1,
-        "18 in · -4 AN PTFE pressure hose; HTH-HT-039103",
+        "18 in · -4 AN female ends · braided stainless pressure hose; HTH-HT-039103",
         "Proposed",
-        "One HT-039103 kit includes hose, adapters and insulated P-clamps; remote-mount sensor on chassis.",
+        "One HT-039103 kit includes hose, 1/8 NPT adapters and insulated P-clamps; anchor sensor on chassis and allow for engine motion.",
         "F08"
       ],
       [
@@ -2936,7 +2936,7 @@ window.FUEL_CHAINS = [
         1,
         "1/8 in NPT male · 0–150 psi; HTH-HT-010910",
         "Proposed",
-        "User-selected; remote mount only. Includes 3-pin Delphi connector.",
+        "User-selected; mount to chassis. Includes 3-pin Delphi connector. Wiring project: A ground, B 5V, C signal to R3 AVI6/C15.",
         "F08"
       ],
       [
@@ -4807,7 +4807,7 @@ function renderConnectedNetwork(){
   const crossover=run('F07',[0,1,2,3,4,5,6],250,2390,250,colors.crossover);
   arrow(liftA,crossover[0],colors.crossover);arrow(crossover.at(-1),liftB,colors.crossover);
 
-  zone(2050,'REGULATED PRESSURE TAP → REMOTE HALTECH SENSOR',spreadX(4050));
+  zone(2050,'ENGINE-MOUNTED MALLORY → FLEX HOSE → CHASSIS HALTECH SENSOR',spreadX(4050));
   const sensor=run('F08',[0,1,2,3,4,5],4050,2050,250,colors.sensor);
   arrow(regulator,sensor[0],colors.sensor);
 
