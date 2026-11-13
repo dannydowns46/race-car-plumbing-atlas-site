@@ -15,7 +15,7 @@
 #diagram{overflow:hidden}.detail-atlas .network-layer{display:none}body:not(.detail-atlas) .atlas-layer{display:none}.network-flow{stroke-width:7}
 </style></head>
 <body><header><div class="brand"><span class="brand-icon">↔</span><div><b>RACE CAR / SYSTEM ATLAS</b><small>Plumbing & connection register</small></div></div><div class="header-right"><span class="draft">WORKING DESIGN</span><button id="layout-toggle" class="secondary" type="button" aria-pressed="true">Show header details</button><button id="export" class="secondary">Export parts CSV ↓</button></div></header>
-<main><aside class="rail"><div class="eyebrow">SYSTEMS</div><nav id="systems" aria-label="Plumbing systems"></nav><div class="rail-note"><b>One connection at a time.</b><p>Select a component or line to see its ports, hose ends and open decisions.</p><p>Layout is schematic, not a physical routing or engineering approval.</p></div><div class="rail-foot">REV 04 <span>27 OCT 2026</span></div></aside>
+<main><aside class="rail"><div class="eyebrow">SYSTEMS</div><nav id="systems" aria-label="Plumbing systems"></nav><div class="rail-note"><b>One connection at a time.</b><p>Select a component or line to see its ports, hose ends and open decisions.</p><p>Layout is schematic, not a physical routing or engineering approval.</p></div><div class="rail-foot">REV 05 <span>13 NOV 2026</span></div></aside>
 <section class="workspace"><div class="heading"><div><div class="eyebrow" id="system-kicker">01 / THERMAL MANAGEMENT</div><h1 id="title">Cooling system</h1><p id="subtitle"></p></div><div class="metric"><b id="component-count"></b><span>components</span></div></div>
 <div class="tabs"><div role="tablist" aria-label="View"><button role="tab" data-view="schematic" aria-selected="true">Schematic</button><button role="tab" data-view="parts" aria-selected="false">Parts register <span id="parts-count"></span></button><button role="tab" data-view="issues" aria-selected="false">Open decisions <span id="issues-count"></span></button></div><label class="search"><span>⌕</span><input id="search" type="search" placeholder="Find a component or connection…" aria-label="Find a component or connection"></label></div>
 <div id="schematic-view"><div class="canvas-header"><div class="legend"><span style="--dot:#cd5b43">Hot coolant</span><span style="--dot:#317bb6">Cooled return</span><span style="--dot:#8a6ab6">Steam vent</span><span style="--dot:#31957d">Tank return</span><span style="--dot:#df862e">Overflow</span></div><div class="zoom"><button id="zoom-out" aria-label="Zoom out">−</button><button id="fit">Fit</button><button id="zoom-in" aria-label="Zoom in">+</button></div></div><div id="canvas" class="canvas"><svg id="diagram" role="group" aria-label="Interactive plumbing schematic" viewBox="0 0 1340 900"></svg></div><div class="canvas-footer"><span>Choose Show circuit for every fitting · Click a card for its product page · Drag to pan · Scroll to zoom</span><span>AN flare ≠ ORB seal</span></div><div id="circuit-list" class="circuit-list" aria-label="Select connection"></div></div>
@@ -34,38 +34,34 @@
         "Confirmed modification"
       ],
       [
-        "female",
-        "Fragola hose end",
-        "Female -16 AN × -16 hose",
-        "Summit FRA-220116-BL, Fragola Series 2000 straight. Four required if all four ends can be straight; verify angles after routing.",
+        "low90",
+        "Installed pump hose end",
+        "90° × -16 hose",
+        "Installed 90° hose end accepts the -16 coolant hose directly.",
         {
-          "sku": "FRA-220116-BL",
-          "brand": "Fragola",
-          "source": "https://www.summitracing.com/parts/fra-220116-bl",
-          "image": "fra-220116-bl.jpg",
-          "caption": "Summit product photo of Fragola 220116-BL; straight -16 female AN reusable end.",
-          "photoStatus": "Proposed"
+          "status": "Owned",
+          "photoStatus": "Installed"
         }
       ],
       [
         "hose",
         "Fragola coolant hose",
-        "-16 AN hose",
-        "Summit FRA-840616, 6 ft package shown as a length option. Fragola Premium Black Nylon synthetic-rubber hose is coolant-rated and compatible with Series 2000 ends. Measure combined cut lengths before choosing package quantity.",
+        "-16 AN hose · 12 in cut",
+        "Cut 12 in from FRA-840616.",
         {
           "sku": "FRA-840616",
           "brand": "Fragola",
           "source": "https://www.summitracing.com/parts/fra-840616",
           "image": "fra-840616.jpg",
-          "caption": "Summit product photo for a 6 ft -16 hose package. Package count is not set until both rear hose paths are measured.",
-          "photoStatus": "Length option"
+          "caption": "Summit hose package photo.",
+          "photoStatus": "Selected"
         }
       ],
       [
         "female",
         "Fragola hose end",
         "Female -16 AN × -16 hose",
-        "Summit FRA-220116-BL, Fragola Series 2000 straight. Four required if all four ends can be straight; verify angles after routing.",
+        "Straight female -16 AN × -16 hose. Three required across L01 and L04.",
         {
           "sku": "FRA-220116-BL",
           "brand": "Fragola",
@@ -141,7 +137,7 @@
         "elbow",
         "ASYXPCRH 90° elbow",
         "35 mm ID both ends",
-        "B0F1T27F4C; 5.4 mm wall; 4-ply silicone; 4 in legs; black; user confirmed",
+        "B0F1T27F4C; 5.4 mm wall; 4-ply silicone; 4 in legs; black; user confirmed Owned elbow.",
         {
           "sku": "B0F1T27F4C",
           "brand": "ASYXPCRH",
@@ -173,7 +169,7 @@
         "elbow",
         "ASYXPCRH 90° elbow",
         "35 mm ID both ends",
-        "B0F1T27F4C; 5.4 mm wall; 4-ply silicone; 4 in legs; black; user confirmed",
+        "B0F1T27F4C; 5.4 mm wall; 4-ply silicone; 4 in legs; black; user confirmed Owned elbow.",
         {
           "sku": "B0F1T27F4C",
           "brand": "ASYXPCRH",
@@ -249,7 +245,7 @@
         "female",
         "Fragola hose end",
         "Female -16 AN × -16 hose",
-        "Summit FRA-220116-BL, Fragola Series 2000 straight. Four required if all four ends can be straight; verify angles after routing.",
+        "Straight female -16 AN × -16 hose. Three required across L01 and L04.",
         {
           "sku": "FRA-220116-BL",
           "brand": "Fragola",
@@ -262,22 +258,22 @@
       [
         "hose",
         "Fragola coolant hose",
-        "-16 AN hose",
-        "Summit FRA-840616, 6 ft package shown as a length option. Fragola Premium Black Nylon synthetic-rubber hose is coolant-rated and compatible with Series 2000 ends. Measure combined cut lengths before choosing package quantity.",
+        "-16 AN hose · 12 in cut",
+        "Cut 12 in from FRA-840616.",
         {
           "sku": "FRA-840616",
           "brand": "Fragola",
           "source": "https://www.summitracing.com/parts/fra-840616",
           "image": "fra-840616.jpg",
-          "caption": "Summit product photo for a 6 ft -16 hose package. Package count is not set until both rear hose paths are measured.",
-          "photoStatus": "Length option"
+          "caption": "Summit hose package photo.",
+          "photoStatus": "Selected"
         }
       ],
       [
         "female",
         "Fragola hose end",
         "Female -16 AN × -16 hose",
-        "Summit FRA-220116-BL, Fragola Series 2000 straight. Four required if all four ends can be straight; verify angles after routing.",
+        "Straight female -16 AN × -16 hose. Three required across L01 and L04.",
         {
           "sku": "FRA-220116-BL",
           "brand": "Fragola",
@@ -288,24 +284,20 @@
         }
       ],
       [
-        "speedflow922",
-        "Speedflow 90° adapter",
-        "Male -16 ORB × male -16 AN",
-        "Summit SFL-SF92216BLK / 922-16-BLK; clearance / clocking verify",
+        "low90",
+        "Installed thermostat elbow",
+        "90° × male -16 AN",
+        "Installed 90° male -16 AN fitting accepts a straight female -16 AN hose end.",
         {
-          "image": "speedflow-922.jpg",
-          "sku": "922-16-BLK",
-          "brand": "Speedflow",
-          "source": "https://www.summitracing.com/parts/sfl-sf92216blk",
-          "caption": "Speedflow 922-series listing photo; selected part 922-16-BLK / Summit SFL-SF92216BLK. Family image may show a different dash size.",
-          "photoStatus": "Series photo"
+          "status": "Owned",
+          "photoStatus": "Installed"
         }
       ],
       [
         "housing",
         "Motion thermostat housing",
         "Female -16 ORB",
-        "Mating size per user-selected Speedflow adapter",
+        "Owned Motion Raceworks housing with elbow installed.",
         {
           "image": "thermostat.jpg",
           "sku": "10-10019",
@@ -328,31 +320,28 @@
         "Stock adapter retained; tank base M25 × 1.50 per Speedway listing"
       ],
       [
-        "female",
-        "Fragola reducer end",
+        "low90",
+        "90° tank reducer",
         "Female -8 AN × -6 hose",
-        "Summit FRA-220107-BL; Fragola Series 2000 straight hose end. Compatible with selected Fragola Premium Black Nylon -6 hose; routing angle to verify.",
+        "Fragola Series 2000 reducer for the tank end of the return hose.",
         {
-          "sku": "FRA-220107-BL",
           "brand": "Fragola",
-          "source": "https://www.summitracing.com/parts/fra-220107-bl",
-          "image": "fragola-220107.jpg",
-          "caption": "Supplier photo shows red/blue 220107; Summit FRA-220107-BL is black. Verify color against listing.",
-          "photoStatus": "Proposed"
+          "sku": "FRA-229007-BL",
+          "source": "https://www.summitracing.com/parts/fra-229007-bl"
         }
       ],
       [
         "hose",
         "Fragola coolant hose",
-        "-6 hose",
-        "Summit FRA-840306, 3 ft -6 hose package shown as a length option. Coolant-rated Premium Black Nylon hose matches Fragola Series 2000 ends. Measure route before choosing package quantity.",
+        "-6 hose · 8 in cut",
+        "Cut 8 in from FRA-840306.",
         {
           "sku": "FRA-840306",
           "brand": "Fragola",
           "source": "https://www.summitracing.com/parts/fra-840306",
           "image": "fra-840306.jpg",
-          "caption": "Summit product photo for a 3 ft -6 hose package. Final length to measure.",
-          "photoStatus": "Length option"
+          "caption": "Summit hose package photo.",
+          "photoStatus": "Selected"
         }
       ],
       [
@@ -396,15 +385,15 @@
       [
         "hose",
         "1/4 in coolant hose",
-        "1/4 in ID",
-        "Summit SUM-240425003, 3 ft of 1/4 in ID reinforced rubber hose, explicitly coolant rated. Confirm length before purchase.",
+        "1/4 in ID · 14 in cut",
+        "Cut 14 in from SUM-240425003.",
         {
           "sku": "SUM-240425003",
           "brand": "Summit Racing",
           "source": "https://www.summitracing.com/parts/sum-240425003",
           "image": "sum-240425003.jpg",
-          "caption": "Summit product photo for 3 ft 1/4-inch ID reinforced rubber hose.",
-          "photoStatus": "Length option"
+          "caption": "Summit hose package photo.",
+          "photoStatus": "Selected"
         }
       ],
       [
@@ -449,21 +438,30 @@
     [
       [
         "barb",
-        "Tank under-cap barb",
-        "Barb OD TBD",
-        "Measure attachment diameter"
+        "Expansion tank replacement barb",
+        "5/16 in barb × 1/8-27 male NPT",
+        "Original brass fitting measures about 3/8 in OD at the large end. Verify 1/8-27 NPT with a thread gauge before ordering SUM-221002.",
+        {
+          "brand": "Summit Racing",
+          "sku": "SUM-221002",
+          "source": "https://www.summitracing.com/part/summit-racing/sum-221002/4175614"
+        }
       ],
       [
         "orange",
         "Supplied orange hose",
-        "ID TBD; included with bottle",
-        "Do not buy duplicate hose"
+        "5/16 in ID · owned",
+        "Correct length already on hand."
       ],
       [
         "barb",
         "EVIL ENERGY bottle inlet",
-        "Barb OD TBD",
-        "Use supplied bottle connection"
+        "For 5/16 in ID hose",
+        "Retain the supplied bottle fitting.",
+        {
+          "brand": "EVIL ENERGY",
+          "source": "https://www.ievilenergy.com/products/coolant-overflow-tank-800ml"
+        }
       ]
     ]
   ],
@@ -492,8 +490,8 @@
       [
         "cap",
         "Expansion pressure cap",
-        "Neck fit / pressure rating TBD",
-        "Cap selection unresolved"
+        "Owned pressure cap",
+        "Pressure rating not recorded."
       ],
       [
         "weld",
@@ -507,12 +505,12 @@
 
 // Brake circuit pieces are repeated per circuit; quantities are in the parts register.
 window.BRAKE_CHAINS = [
-  ...['B01','B03'].map((id)=>[id,id==='B01'?'Front master to Delta sensor tee':'Rear master to Delta sensor tee',[
+  ...['B01','B03'].map((id)=>[id,id==='B01'?'Front master to pressure sensor tee':'Rear master to pressure sensor tee',[
     ['adapter','Master outlet adapter','male AN-3 37° flare ↔ female M10×1 ISO bubble','Fragola 650205; final brake master must be ABS-compatible.',{brand:'Summit',sku:'FRA-650205',source:'https://www.summitracing.com/parts/fra-650205',image:'fra-650205.jpg'}],
     ['adapter','Master-end tube nut','male M10×1 · 3/16 in tube','The Stop Shop F208; ISO bubble flare formed on tube.',{brand:'The Stop Shop',sku:'OPS-F208',source:'https://www.summitracing.com/parts/ops-f208',image:'ops-f208.jpg'}],
     ['tube','Rigid master-to-tee line','3/16 in CuNi · ISO bubble both ends','Summit 25 ft coil; cut length to measure and support on chassis.',{brand:'Summit',sku:'SUM-220216-25X',source:'https://www.summitracing.com/parts/sum-220216-25x',image:'sum-220216-25x.jpg'}],
     ['adapter','Tee-end tube nut','male M10×1 · 3/16 in tube','The Stop Shop F208; ISO bubble flare enters tee.',{brand:'The Stop Shop',sku:'OPS-F208',source:'https://www.summitracing.com/parts/ops-f208',image:'ops-f208.jpg'}],
-    ['adapter','Delta sensor tee','3 × female M10×1 ISO bubble interfaces','Tee supported at chassis; pressure sensor is on its branch.',{brand:'Delta ABS',sku:'M10 bubble tee',source:'https://www.deltaabs.com/products/m10-bubble-tee',image:'delta-tee.png'}]
+    ["adapter","Delta ABS brake pressure sensor tee","M10×1.0 DIN/ISO bubble flare","Buy one Delta tee per master cylinder outlet. Summit OPS-UT10B-1 is a possible substitute pending sensor-seat verification.",{"brand":"Delta ABS USA","status":"Buy","source":"https://www.deltaabs.com/products/m10-bubble-tee"}]
   ]]),
   ...['B02','B04'].map((id)=>[id,id==='B02'?'Front tee to HCU MC1':'Rear tee to HCU MC2',[
     ['adapter','Tee-end tube nut','male M10×1 · 3/16 in tube','The Stop Shop F208; ISO bubble flare formed on tube.',{brand:'The Stop Shop',sku:'OPS-F208',source:'https://www.summitracing.com/parts/ops-f208',image:'ops-f208.jpg'}],
@@ -523,19 +521,23 @@ window.BRAKE_CHAINS = [
     ['adapter','HCU-end tube nut','male M10×1 · 3/16 in tube','The Stop Shop F208; ISO bubble seat.',{brand:'The Stop Shop',sku:'OPS-F208',source:'https://www.summitracing.com/parts/ops-f208',image:'ops-f208.jpg'}],
     ['tube','Dedicated rigid brake line','3/16 in CuNi · ISO bubble both ends','One line per wheel; cut length to measure.',{brand:'Summit',sku:'SUM-220216-25X',source:'https://www.summitracing.com/parts/sum-220216-25x',image:'sum-220216-25x.jpg'}],
     ['adapter','Tab-end tube nut','male M10×1 · 3/16 in tube','The Stop Shop F208; ISO bubble seat.',{brand:'The Stop Shop',sku:'OPS-F208',source:'https://www.summitracing.com/parts/ops-f208',image:'ops-f208.jpg'}],
-    ['adapter','Fixed chassis transition','female M10×1 bubble ↔ male -3 AN','Pure Choice 2165 kit; includes welded tab and retaining clip. Two kits for four wheels.',{brand:'Pure Choice',sku:'2165',source:'https://www.purechoicemotorsports.com/products/inverted-flare-brake-line-bulkhead-fitting-tab-kits',image:'purechoice-2165.jpg'}],
-    ['hose','Factory-crimped braided flex','female -3 AN ↔ 10 mm banjo eye','Russell 657222 20 in candidate; 657042 is 18 in alternative. Select by full-motion check.',{brand:'Russell',sku:'RUS-657222',source:'https://www.summitracing.com/parts/rus-657222',image:'rus-657222.jpg'}],
+    ["adapter","Fixed chassis transition","female M10×1 bubble ↔ male -3 AN","Use one WIL-220-6890, one AAF-ALL60030 weld tab and one WIL-300-15780 clip per wheel. Verify tab thickness and clip engagement at mock-up.",{"brand":"Wilwood","sku":"WIL-220-6890","source":"https://www.summitracing.com/parts/wil-220-6890"}],
+    ['hose','Factory-crimped braided flex','female -3 AN ↔ 10 mm banjo eye',wheel.endsWith('F')?'24 in finished.':'20 in finished.',{brand:'Russell',sku:wheel.endsWith('F')?'RUS-657062':'RUS-657222',source:'https://www.summitracing.com/parts/'+(wheel.endsWith('F')?'rus-657062':'rus-657222')}],
     ['adapter','Banjo bolt','M10×1 · grip length TBD','GM OE 11569590 verifies M10×1 front/rear. Russell R40506 length remains unverified for the chosen banjo eye.',{brand:'Summit',sku:'RUS-R40506',source:'https://www.summitracing.com/parts/rus-r40506',image:'rus-r40506.jpg'}],
     ['seal','Crush washers ×2','10 mm ID · one on each side of eye','New washers at each assembly; one 10-pack covers four calipers.',{brand:'Summit',sku:'RUS-R49005',source:'https://www.summitracing.com/parts/rus-r49005',image:'rus-r49005.jpg'}]
   ]]),
   ...[['BFF1','front brake'],['BRF1','rear brake'],['BCF1','clutch']].map(([id,circuit])=>[id,`${circuit} remote reservoir feed`,[
     ['reservoir','Tilton 72-578 chamber','male -4 AN outlet','Owned: one of three isolated chambers in a single physical reservoir; front/center, rear/left, clutch/right.',{brand:'Tilton',sku:'TIL-72-578',source:'https://www.summitracing.com/parts/til-72-578',image:'til-72-578.jpg'}],
-    ['hose','Dedicated reservoir feed','female -4 AN ↔ female -4 AN; PTFE-lined','Fragola 360018 18 in is a pictured example only; select actual length after mounting.',{brand:'Fragola',sku:'FRA-360018 (length example)',source:'https://www.summitracing.com/parts/fra-360018',image:'fra-360018.jpg'}],
+    ["hose","Dedicated reservoir feed","Straight female -4 AN at reservoir, 90° female -4 AN at master","10 in finished for all three feeds; straight at reservoir, 90° at master.",{"brand":"Fragola","sku":"FRA-410-1-2-10","source":"https://www.summitracing.com/part/fragola-performance-systems/410-1-2-10/2455791"}],
     ['adapter','Tilton 76-series inlet adapter','7/16-20 male O-ring ↔ male -4 AN flare','Tilton 76-015; one per retained 76-series master. Recheck brake adapters if masters change.',{brand:'Tilton',sku:'TIL-76-015',source:'https://www.summitracing.com/parts/til-76-015',image:'til-76-015.jpg'}]
   ]]),
   ['BC02','Clutch master to Wilwood pull slave',[
-    ['adapter','Clutch master union','male -3 AN ↔ male -3 AN','Tilton 73-820, at selected master outlet.',{brand:'Summit',sku:'TIL-73-820',source:'https://www.summitracing.com/parts/til-73-820',image:'til-73-820.jpg'}],
-    ['hose','Clutch pressure hose','female -3 AN ↔ female -3 AN','Factory-assembled PTFE brake/clutch hose; length TBD. Earl’s Speed-Flex product family shown.',{brand:'Summit',sku:'EAR-630101xxERL',source:'https://www.summitracing.com/search/product-line/earls-performance-speed-flex-brake-lines',image:'ear-63010106erl.jpg'}],
+    ["adapter","Master outlet adapter","Male -3 AN × female 3/8-24 inverted flare","Fit to the selected pressure outlet. Retain the plug in the unused outlet.",{"brand":"Tilton","sku":"TIL-TE2089-188L","source":"https://www.summitracing.com/parts/til-te2089-188l"}],
+    ["adapter","Master-end tube nut","3/8-24 male SAE inverted flare for 3/16 in tube","One of two tube nuts on the clutch hardline.",{"brand":"Summit Racing","sku":"SUM-220511","source":"https://www.summitracing.com/parts/sum-220511"}],
+    ["tube","Clutch pressure hardline","3/16 in OD with SAE 45° double flares","Cut from the shared 25 ft coil. Measure the clutch run with the eight brake hardlines.",{"brand":"Summit Racing","sku":"SUM-220216-25X","source":"https://www.summitracing.com/parts/sum-220216-25x"}],
+    ["adapter","Tab-end tube nut","3/8-24 male SAE inverted flare for 3/16 in tube","Mates with the chassis bulkhead.",{"brand":"Summit Racing","sku":"SUM-220511","source":"https://www.summitracing.com/parts/sum-220511"}],
+    ["adapter","Fixed chassis transition","Female 3/8-24 inverted flare × male -3 AN","Use one 3/8-24 inverted-flare to -3 AN adapter, tab and clip. One bolt-on kit supplies two transitions. Check mounting space.",{"brand":"Summit Racing","sku":"SUM-770945-KIT","source":"https://www.summitracing.com/part/summit-racing/sum-770945-kit/7818723"}],
+    ["hose","Chassis-to-slave flex hose","Female -3 AN swivel at both ends","12 in finished, straight/straight; check clearance through full travel.",{"brand":"Earl’s","sku":"EAR-63010112ERL","source":"https://www.summitracing.com/part/earls-performance/63010112erl/912659"}],
     ['adapter','Slave inlet adapter','male -3 AN ↔ male 3/8-24 inverted flare','Fragola 650302 fits Wilwood IF port; verify selected physical port.',{brand:'Summit',sku:'FRA-650302',source:'https://www.summitracing.com/parts/fra-650302',image:'fra-650302.jpg'}],
     ['pump','Wilwood pull slave','260-1333 · 7/8 in bore','User-selected slave. Wilwood recommends 0.750 in master; verify clutch master bore.',{brand:'Summit',sku:'WIL-260-1333',source:'https://www.summitracing.com/parts/wil-260-1333',image:'wilwood-260-1333.jpg'}]
   ]]
@@ -575,7 +577,7 @@ window.FUEL_CHAINS = [
       [
         "hose",
         "Pump-to-hat submersible hose",
-        "5/16 in ID at pump · hat end TBD",
+        "5/16 in ID at pump · hat end TBD · 8 in cut",
         "Dayco 80160 is an optional submersible 5/16 in hose. Inspect hat inner barb; listing mentions 3/8 in, which needs a compatible transition.",
         {
           "brand": "Dayco",
@@ -614,26 +616,25 @@ window.FUEL_CHAINS = [
       [
         "hose",
         "-8 PTFE hose — overflow-side lift to surge SUPPLY",
-        "-8 PTFE; cut length TBD",
+        "-8 PTFE · 16 in cut",
         "Cut and pressure test after routing. Use matched Summit HE2 hose ends.",
         {
           "brand": "Summit Racing",
-          "sku": "SUM-H2-08-10-BLK",
-          "source": "https://www.summitracing.com/parts/sum-h2-08-10-blk",
+          "sku": "SUM-H2-08-15-BLK",
+          "source": "https://www.summitracing.com/parts/sum-h2-08-15-blk",
           "image": "fuel-sum-h2-08-10-blk.jpg",
           "photoStatus": ""
         }
       ],
       [
-        "female",
+        "low90",
         "-8 female PTFE hose end — surge SUPPLY",
-        "-8 AN female swivel × -8 PTFE hose",
-        "Straight shown; select angle after mock-up.",
+        "90° · -8 AN female swivel × -8 PTFE hose",
+        "Check fitting clearance at the recorded hose length.",
         {
           "brand": "Summit Racing",
-          "sku": "SUM-HE2-08-STB",
-          "source": "https://www.summitracing.com/parts/sum-he2-08-stb",
-          "image": "fuel-sum-he2-08-stb.jpg",
+          "sku": "SUM-HE2-08-90B",
+          "source": "https://www.summitracing.com/parts/sum-he2-08-90b",
           "photoStatus": ""
         }
       ],
@@ -698,7 +699,7 @@ window.FUEL_CHAINS = [
       [
         "hose",
         "Pump-to-hat submersible hose",
-        "5/16 in ID at pump · hat end TBD",
+        "5/16 in ID at pump · hat end TBD · 8 in cut",
         "Dayco 80160 is an optional submersible 5/16 in hose. Inspect hat inner barb; listing mentions 3/8 in, which needs a compatible transition.",
         {
           "brand": "Dayco",
@@ -722,41 +723,39 @@ window.FUEL_CHAINS = [
         }
       ],
       [
-        "female",
+        "low90",
         "-8 female PTFE hose end — other hat",
-        "-8 AN female swivel × -8 PTFE hose",
-        "Straight shown; select angle after mock-up.",
+        "90° · -8 AN female swivel × -8 PTFE hose",
+        "Check fitting clearance at the recorded hose length.",
         {
           "brand": "Summit Racing",
-          "sku": "SUM-HE2-08-STB",
-          "source": "https://www.summitracing.com/parts/sum-he2-08-stb",
-          "image": "fuel-sum-he2-08-stb.jpg",
+          "sku": "SUM-HE2-08-90B",
+          "source": "https://www.summitracing.com/parts/sum-he2-08-90b",
           "photoStatus": ""
         }
       ],
       [
         "hose",
         "-8 PTFE hose — other lift to surge OUTLET2",
-        "-8 PTFE; cut length TBD",
+        "-8 PTFE · 45 in cut",
         "Cut and pressure test after routing. Use matched Summit HE2 hose ends.",
         {
           "brand": "Summit Racing",
-          "sku": "SUM-H2-08-10-BLK",
-          "source": "https://www.summitracing.com/parts/sum-h2-08-10-blk",
+          "sku": "SUM-H2-08-15-BLK",
+          "source": "https://www.summitracing.com/parts/sum-h2-08-15-blk",
           "image": "fuel-sum-h2-08-10-blk.jpg",
           "photoStatus": ""
         }
       ],
       [
-        "female",
+        "low90",
         "-8 female PTFE hose end — surge OUTLET2",
-        "-8 AN female swivel × -8 PTFE hose",
-        "Straight shown; select angle after mock-up.",
+        "90° · -8 AN female swivel × -8 PTFE hose",
+        "Check fitting clearance at the recorded hose length.",
         {
           "brand": "Summit Racing",
-          "sku": "SUM-HE2-08-STB",
-          "source": "https://www.summitracing.com/parts/sum-he2-08-stb",
-          "image": "fuel-sum-he2-08-stb.jpg",
+          "sku": "SUM-HE2-08-90B",
+          "source": "https://www.summitracing.com/parts/sum-he2-08-90b",
           "photoStatus": ""
         }
       ],
@@ -821,7 +820,7 @@ window.FUEL_CHAINS = [
       [
         "hose",
         "DW200 internal outlet hose",
-        "5/16 in ID at pump · hat end TBD",
+        "5/16 in ID at pump · hat end TBD · 8 in cut",
         "Use surge supplied internal hose if it fits DW200; otherwise Dayco 80160 is a candidate. Verify internal hat barb.",
         {
           "brand": "Dayco",
@@ -860,12 +859,12 @@ window.FUEL_CHAINS = [
       [
         "hose",
         "-8 PTFE hose — pressure feed to filter",
-        "-8 PTFE; cut length TBD",
+        "-8 PTFE · 18 in cut",
         "Cut and pressure test after routing. Use matched Summit HE2 hose ends.",
         {
           "brand": "Summit Racing",
-          "sku": "SUM-H2-08-10-BLK",
-          "source": "https://www.summitracing.com/parts/sum-h2-08-10-blk",
+          "sku": "SUM-H2-08-15-BLK",
+          "source": "https://www.summitracing.com/parts/sum-h2-08-15-blk",
           "image": "fuel-sum-h2-08-10-blk.jpg",
           "photoStatus": ""
         }
@@ -887,13 +886,12 @@ window.FUEL_CHAINS = [
         "orb",
         "Filter inlet -8 adapter",
         "Filter body port × -8 AN male; actual variant verify",
-        "Use supplied adapter only after identifying purchased filter body.",
+        "Check the owned filter and supplied adapters first. If the bare port is -8 ORB and a replacement is needed, use SUM-220165B. Identify any other port before ordering.",
         {
-          "brand": "EVIL ENERGY",
-          "sku": "Included / unverified",
-          "source": "https://www.ievilenergy.com/products/10-micron-fuel-filter-kit-an-barb-adapters",
-          "image": "fuel-filter.jpg",
-          "photoStatus": "Candidate photo"
+          "brand": "Summit Racing",
+          "sku": "SUM-220165B",
+          "source": "https://www.summitracing.com/parts/sum-220165b",
+          "photoStatus": "Only for verified -8 ORB"
         }
       ],
       [
@@ -913,13 +911,12 @@ window.FUEL_CHAINS = [
         "orb",
         "Filter outlet -8 adapter",
         "Filter body port × -8 AN male; actual variant verify",
-        "Use supplied adapter only after identifying purchased filter body.",
+        "Check the owned filter and supplied adapters first. If the bare port is -8 ORB and a replacement is needed, use SUM-220165B. Identify any other port before ordering.",
         {
-          "brand": "EVIL ENERGY",
-          "sku": "Included / unverified",
-          "source": "https://www.ievilenergy.com/products/10-micron-fuel-filter-kit-an-barb-adapters",
-          "image": "fuel-filter.jpg",
-          "photoStatus": "Candidate photo"
+          "brand": "Summit Racing",
+          "sku": "SUM-220165B",
+          "source": "https://www.summitracing.com/parts/sum-220165b",
+          "photoStatus": "Only for verified -8 ORB"
         }
       ],
       [
@@ -938,12 +935,12 @@ window.FUEL_CHAINS = [
       [
         "hose",
         "-8 PTFE hose — filter to Mallory",
-        "-8 PTFE; cut length TBD",
+        "-8 PTFE · 22 in cut",
         "Cut and pressure test after routing. Use matched Summit HE2 hose ends.",
         {
           "brand": "Summit Racing",
-          "sku": "SUM-H2-08-10-BLK",
-          "source": "https://www.summitracing.com/parts/sum-h2-08-10-blk",
+          "sku": "SUM-H2-08-15-BLK",
+          "source": "https://www.summitracing.com/parts/sum-h2-08-15-blk",
           "image": "fuel-sum-h2-08-10-blk.jpg",
           "photoStatus": ""
         }
@@ -994,22 +991,21 @@ window.FUEL_CHAINS = [
         }
       ],
       [
-        "female",
+        "hoseEnd45",
         "-6 female PTFE hose end — regulator outlet",
-        "-6 AN female swivel × -6 PTFE hose",
-        "Straight shown; select angle after mock-up.",
+        "45° · -6 AN female swivel × -6 PTFE hose",
+        "Check fitting clearance at the recorded hose length.",
         {
           "brand": "Summit Racing",
-          "sku": "SUM-HE2-06-STB",
-          "source": "https://www.summitracing.com/parts/sum-he2-06-stb",
-          "image": "fuel-sum-he2-06-stb.jpg",
+          "sku": "SUM-HE2-06-45B",
+          "source": "https://www.summitracing.com/parts/sum-he2-06-45b",
           "photoStatus": ""
         }
       ],
       [
         "hose",
         "-6 PTFE hose — rail feed",
-        "-6 PTFE; cut length TBD",
+        "-6 PTFE · 15 in cut",
         "Cut and pressure test after routing. Use matched Summit HE2 hose ends.",
         {
           "brand": "Summit Racing",
@@ -1020,15 +1016,14 @@ window.FUEL_CHAINS = [
         }
       ],
       [
-        "female",
+        "low90",
         "-6 female PTFE hose end — rail",
-        "-6 AN female swivel × -6 PTFE hose",
-        "Straight shown; select angle after mock-up.",
+        "90° · -6 AN female swivel × -6 PTFE hose",
+        "Check fitting clearance at the recorded hose length.",
         {
           "brand": "Summit Racing",
-          "sku": "SUM-HE2-06-STB",
-          "source": "https://www.summitracing.com/parts/sum-he2-06-stb",
-          "image": "fuel-sum-he2-06-stb.jpg",
+          "sku": "SUM-HE2-06-90B",
+          "source": "https://www.summitracing.com/parts/sum-he2-06-90b",
           "photoStatus": ""
         }
       ],
@@ -1065,41 +1060,39 @@ window.FUEL_CHAINS = [
         }
       ],
       [
-        "female",
+        "low90",
         "-8 female PTFE hose end — Mallory bypass",
-        "-8 AN female swivel × -8 PTFE hose",
-        "Straight shown; select angle after mock-up.",
+        "90° · -8 AN female swivel × -8 PTFE hose",
+        "Check fitting clearance at the recorded hose length.",
         {
           "brand": "Summit Racing",
-          "sku": "SUM-HE2-08-STB",
-          "source": "https://www.summitracing.com/parts/sum-he2-08-stb",
-          "image": "fuel-sum-he2-08-stb.jpg",
+          "sku": "SUM-HE2-08-90B",
+          "source": "https://www.summitracing.com/parts/sum-he2-08-90b",
           "photoStatus": ""
         }
       ],
       [
         "hose",
         "-8 PTFE hose — bypass return",
-        "-8 PTFE; cut length TBD",
+        "-8 PTFE · 25 in cut",
         "Cut and pressure test after routing. Use matched Summit HE2 hose ends.",
         {
           "brand": "Summit Racing",
-          "sku": "SUM-H2-08-10-BLK",
-          "source": "https://www.summitracing.com/parts/sum-h2-08-10-blk",
+          "sku": "SUM-H2-08-15-BLK",
+          "source": "https://www.summitracing.com/parts/sum-h2-08-15-blk",
           "image": "fuel-sum-h2-08-10-blk.jpg",
           "photoStatus": ""
         }
       ],
       [
-        "female",
+        "low90",
         "-8 female PTFE hose end — surge RETURN",
-        "-8 AN female swivel × -8 PTFE hose",
-        "Straight shown; select angle after mock-up.",
+        "90° · -8 AN female swivel × -8 PTFE hose",
+        "Check fitting clearance at the recorded hose length.",
         {
           "brand": "Summit Racing",
-          "sku": "SUM-HE2-08-STB",
-          "source": "https://www.summitracing.com/parts/sum-he2-08-stb",
-          "image": "fuel-sum-he2-08-stb.jpg",
+          "sku": "SUM-HE2-08-90B",
+          "source": "https://www.summitracing.com/parts/sum-he2-08-90b",
           "photoStatus": ""
         }
       ],
@@ -1136,22 +1129,21 @@ window.FUEL_CHAINS = [
         }
       ],
       [
-        "female",
+        "low90",
         "-6 female PTFE hose end — surge OVERFLOW",
-        "-6 AN female swivel × -6 PTFE hose",
-        "Straight shown; select angle after mock-up.",
+        "90° · -6 AN female swivel × -6 PTFE hose",
+        "Check fitting clearance at the recorded hose length.",
         {
           "brand": "Summit Racing",
-          "sku": "SUM-HE2-06-STB",
-          "source": "https://www.summitracing.com/parts/sum-he2-06-stb",
-          "image": "fuel-sum-he2-06-stb.jpg",
+          "sku": "SUM-HE2-06-90B",
+          "source": "https://www.summitracing.com/parts/sum-he2-06-90b",
           "photoStatus": ""
         }
       ],
       [
         "hose",
         "-6 PTFE hose — overflow to overflow-side hanger",
-        "-6 PTFE; cut length TBD",
+        "-6 PTFE · 16 in cut",
         "Cut and pressure test after routing. Use matched Summit HE2 hose ends.",
         {
           "brand": "Summit Racing",
@@ -1210,20 +1202,17 @@ window.FUEL_CHAINS = [
         "weld",
         "Overflow-side -10 ORB weld bung",
         "-10 ORB female; aluminum",
-        "User-specified Ticon bung, low tank location.",
+        "Owner confirmed both crossover bungs are welded into the finished tanks.",
         {
-          "brand": "Ticon Industries",
-          "sku": "-10 AN ORB weld bung",
-          "source": "https://www.ticonindustries.com/products/aluminum-an-orb-weld-bung?variant=49532112699667",
-          "image": "fuel-ticon-bung.jpg",
-          "photoStatus": ""
+          "status": "Installed",
+          "photoStatus": "Installed"
         }
       ],
       [
         "orb",
         "Overflow-side crossover adapter",
         "-10 ORB male × -10 AN male; O-ring",
-        "Thread into Ticon bung.",
+        "Thread into the matching -10 ORB tank bung.",
         {
           "brand": "Summit Racing",
           "sku": "SUM-220164B",
@@ -1248,7 +1237,7 @@ window.FUEL_CHAINS = [
       [
         "hose",
         "-10 PTFE hose — tank crossover",
-        "-10 PTFE; cut length TBD",
+        "-10 PTFE · 22 in cut",
         "Cut and pressure test after routing. Use matched Summit HE2 hose ends.",
         {
           "brand": "Summit Racing",
@@ -1275,7 +1264,7 @@ window.FUEL_CHAINS = [
         "orb",
         "Other crossover adapter",
         "-10 ORB male × -10 AN male; O-ring",
-        "Thread into Ticon bung.",
+        "Thread into the matching -10 ORB tank bung.",
         {
           "brand": "Summit Racing",
           "sku": "SUM-220164B",
@@ -1288,13 +1277,10 @@ window.FUEL_CHAINS = [
         "weld",
         "Other -10 ORB weld bung",
         "-10 ORB female; aluminum",
-        "User-specified Ticon bung, matching low elevation.",
+        "Owner confirmed both crossover bungs are welded into the finished tanks.",
         {
-          "brand": "Ticon Industries",
-          "sku": "-10 AN ORB weld bung",
-          "source": "https://www.ticonindustries.com/products/aluminum-an-orb-weld-bung?variant=49532112699667",
-          "image": "fuel-ticon-bung.jpg",
-          "photoStatus": ""
+          "status": "Installed",
+          "photoStatus": "Installed"
         }
       ]
     ]
@@ -1346,7 +1332,7 @@ window.FUEL_CHAINS = [
         "hose",
         "Haltech flexible extension",
         "18 in · -4 AN female ends · braided stainless pressure hose",
-        "One HT-039103 kit includes hose, 1/8 NPT adapters and insulated P-clamps; anchor sensor on chassis and allow for engine motion.",
+        "One HT-039103 kit includes hose, 1/8 NPT adapters and insulated P-clamps; anchor sensor on chassis and allow for engine motion. Supplied kit hose is sufficient.",
         {
           "brand": "Haltech",
           "sku": "HTH-HT-039103",
@@ -1555,13 +1541,13 @@ window.OIL_CHAINS = [
       [
         "hose",
         "Pump suction hose",
-        "-16 oil hose · cut to length",
-        "Confirm hot-oil suction/collapse rating, bend radius and reinforcement with Dailey/Fragola before ordering.",
+        "-16 oil hose · 35 in cut",
+        "Fragola rates this -16 hose at 28 inHg vacuum with a 5.5 in minimum bend radius. Verify the installed routing and hot-oil suction requirements with Dailey.",
         {
-          "sku": "FRA-840016",
+          "sku": "FRA-840616",
           "status": "Verify",
           "photoStatus": "Verify",
-          "source": "https://www.summitracing.com/parts/fra-840016",
+          "source": "https://www.summitracing.com/parts/fra-840616",
           "image": "fra-840016.jpg",
           "caption": "Fragola Premium Black Nylon Race Hose series photo."
         }
@@ -1611,45 +1597,41 @@ window.OIL_CHAINS = [
         }
       ],
       [
-        "female",
+        "low90",
         "Cooler feed hose end A",
-        "-12 AN female swivel × -12 hose",
-        "Straight Series 2000 end shown. Confirm angle on car.",
+        "90° · -12 AN female swivel × -12 hose",
+        "Check fitting clearance at the recorded hose length.",
         {
-          "sku": "FRA-220112-BL",
+          "sku": "FRA-229012-BL",
           "status": "Buy",
           "photoStatus": "Buy",
-          "source": "https://www.summitracing.com/parts/fra-220112-bl",
-          "image": "fra-220112-bl.jpg",
-          "caption": "Summit product photo."
+          "source": "https://www.summitracing.com/parts/fra-229012-bl"
         }
       ],
       [
         "hose",
         "Cooler feed hose",
-        "-12 oil hose · cut to length",
-        "Measure routed length and order by the foot.",
+        "-12 oil hose · 60 in cut",
+        "Cut from the selected Fragola pack; check clearance at mock-up.",
         {
-          "sku": "FRA-840012",
+          "sku": "FRA-841012",
           "status": "Buy",
           "photoStatus": "Buy",
-          "source": "https://www.summitracing.com/parts/fra-840012",
+          "source": "https://www.summitracing.com/parts/fra-841012",
           "image": "fra-840016.jpg",
           "caption": "Fragola Premium Black Nylon Race Hose series photo."
         }
       ],
       [
-        "female",
+        "low90",
         "Cooler feed hose end B",
-        "-12 AN female swivel × -12 hose",
-        "Straight Series 2000 end shown. Confirm angle on car.",
+        "90° · -12 AN female swivel × -12 hose",
+        "Check fitting clearance at the recorded hose length.",
         {
-          "sku": "FRA-220112-BL",
+          "sku": "FRA-229012-BL",
           "status": "Buy",
           "photoStatus": "Buy",
-          "source": "https://www.summitracing.com/parts/fra-220112-bl",
-          "image": "fra-220112-bl.jpg",
-          "caption": "Summit product photo."
+          "source": "https://www.summitracing.com/parts/fra-229012-bl"
         }
       ],
       [
@@ -1683,29 +1665,27 @@ window.OIL_CHAINS = [
         }
       ],
       [
-        "female",
+        "low90",
         "Cooled pressure hose end A",
-        "-12 AN female swivel × -12 hose",
-        "Straight Series 2000 end shown. Confirm angle on car.",
+        "90° · -12 AN female swivel × -12 hose",
+        "Check fitting clearance at the recorded hose length.",
         {
-          "sku": "FRA-220112-BL",
+          "sku": "FRA-229012-BL",
           "status": "Buy",
           "photoStatus": "Buy",
-          "source": "https://www.summitracing.com/parts/fra-220112-bl",
-          "image": "fra-220112-bl.jpg",
-          "caption": "Summit product photo."
+          "source": "https://www.summitracing.com/parts/fra-229012-bl"
         }
       ],
       [
         "hose",
         "Cooled pressure hose",
-        "-12 oil hose · cut to length",
-        "Measure routed length and order by the foot.",
+        "-12 oil hose · 38 in cut",
+        "Cut from the selected Fragola pack; check clearance at mock-up.",
         {
-          "sku": "FRA-840012",
+          "sku": "FRA-841012",
           "status": "Buy",
           "photoStatus": "Buy",
-          "source": "https://www.summitracing.com/parts/fra-840012",
+          "source": "https://www.summitracing.com/parts/fra-841012",
           "image": "fra-840016.jpg",
           "caption": "Fragola Premium Black Nylon Race Hose series photo."
         }
@@ -1755,45 +1735,41 @@ window.OIL_CHAINS = [
         }
       ],
       [
-        "female",
+        "low90",
         "Block feed hose end A",
-        "-10 AN female swivel × -10 hose",
-        "Straight Series 2000 end shown. Confirm angle on car.",
+        "90° · -10 AN female swivel × -10 hose",
+        "Check fitting clearance at the recorded hose length.",
         {
-          "sku": "FRA-220110-BL",
+          "sku": "FRA-229010-BL",
           "status": "Buy",
           "photoStatus": "Buy",
-          "source": "https://www.summitracing.com/parts/fra-220110-bl",
-          "image": "fra-220110-bl.jpg",
-          "caption": "Summit product photo."
+          "source": "https://www.summitracing.com/parts/fra-229010-bl"
         }
       ],
       [
         "hose",
         "Block feed hose",
-        "-10 oil hose · cut to length",
-        "Measure routed length and order by the foot.",
+        "-10 oil hose · 22 in cut",
+        "Cut from the selected Fragola pack; check clearance at mock-up.",
         {
-          "sku": "FRA-840010",
+          "sku": "FRA-840610",
           "status": "Buy",
           "photoStatus": "Buy",
-          "source": "https://www.summitracing.com/parts/fra-840010",
+          "source": "https://www.summitracing.com/parts/fra-840610",
           "image": "fra-840016.jpg",
           "caption": "Fragola Premium Black Nylon Race Hose series photo."
         }
       ],
       [
-        "female",
+        "low90",
         "Block feed hose end B",
-        "-10 AN female swivel × -10 hose",
-        "Straight Series 2000 end shown. Confirm angle on car.",
+        "90° · -10 AN female swivel × -10 hose",
+        "Check fitting clearance at the recorded hose length.",
         {
-          "sku": "FRA-220110-BL",
+          "sku": "FRA-229010-BL",
           "status": "Buy",
           "photoStatus": "Buy",
-          "source": "https://www.summitracing.com/parts/fra-220110-bl",
-          "image": "fra-220110-bl.jpg",
-          "caption": "Summit product photo."
+          "source": "https://www.summitracing.com/parts/fra-229010-bl"
         }
       ],
       [
@@ -1839,45 +1815,41 @@ window.OIL_CHAINS = [
         }
       ],
       [
-        "female",
+        "hoseEnd45",
         "Scavenge discharge hose end A",
-        "-16 AN female swivel × -16 hose",
-        "Straight Series 2000 end shown. Confirm angle on car.",
+        "45° · -16 AN female swivel × -16 hose",
+        "Check fitting clearance at the recorded hose length.",
         {
-          "sku": "FRA-220116-BL",
+          "sku": "FRA-224516-BL",
           "status": "Buy",
           "photoStatus": "Buy",
-          "source": "https://www.summitracing.com/parts/fra-220116-bl",
-          "image": "fra-220116-bl.jpg",
-          "caption": "Summit product photo."
+          "source": "https://www.summitracing.com/parts/fra-224516-bl"
         }
       ],
       [
         "hose",
         "Scavenge discharge hose",
-        "-16 oil hose · cut to length",
-        "Measure routed length and order by the foot.",
+        "-16 oil hose · 30 in cut",
+        "Cut from the selected Fragola pack; check clearance at mock-up.",
         {
-          "sku": "FRA-840016",
+          "sku": "FRA-840616",
           "status": "Buy",
           "photoStatus": "Buy",
-          "source": "https://www.summitracing.com/parts/fra-840016",
+          "source": "https://www.summitracing.com/parts/fra-840616",
           "image": "fra-840016.jpg",
           "caption": "Fragola Premium Black Nylon Race Hose series photo."
         }
       ],
       [
-        "female",
+        "low90",
         "Scavenge discharge hose end B",
-        "-16 AN female swivel × -16 hose",
-        "Straight Series 2000 end shown. Confirm angle on car.",
+        "90° · -16 AN female swivel × -16 hose",
+        "Check fitting clearance at the recorded hose length.",
         {
-          "sku": "FRA-220116-BL",
+          "sku": "FRA-229016-BL",
           "status": "Buy",
           "photoStatus": "Buy",
-          "source": "https://www.summitracing.com/parts/fra-220116-bl",
-          "image": "fra-220116-bl.jpg",
-          "caption": "Summit product photo."
+          "source": "https://www.summitracing.com/parts/fra-229016-bl"
         }
       ],
       [
@@ -1893,45 +1865,41 @@ window.OIL_CHAINS = [
         }
       ],
       [
-        "female",
+        "hoseEnd45",
         "Filtered return hose end A",
-        "-16 AN female swivel × -16 hose",
-        "Straight Series 2000 end shown. Confirm angle on car.",
+        "45° · -16 AN female swivel × -16 hose",
+        "Check fitting clearance at the recorded hose length.",
         {
-          "sku": "FRA-220116-BL",
+          "sku": "FRA-224516-BL",
           "status": "Buy",
           "photoStatus": "Buy",
-          "source": "https://www.summitracing.com/parts/fra-220116-bl",
-          "image": "fra-220116-bl.jpg",
-          "caption": "Summit product photo."
+          "source": "https://www.summitracing.com/parts/fra-224516-bl"
         }
       ],
       [
         "hose",
         "Filtered return hose",
-        "-16 oil hose · cut to length",
-        "Measure routed length and order by the foot.",
+        "-16 oil hose · 6 in cut",
+        "Cut from the selected Fragola pack; check clearance at mock-up.",
         {
-          "sku": "FRA-840016",
+          "sku": "FRA-840616",
           "status": "Buy",
           "photoStatus": "Buy",
-          "source": "https://www.summitracing.com/parts/fra-840016",
+          "source": "https://www.summitracing.com/parts/fra-840616",
           "image": "fra-840016.jpg",
           "caption": "Fragola Premium Black Nylon Race Hose series photo."
         }
       ],
       [
-        "female",
+        "hoseEnd45",
         "Filtered return hose end B",
-        "-16 AN female swivel × -16 hose",
-        "Straight Series 2000 end shown. Confirm angle on car.",
+        "45° · -16 AN female swivel × -16 hose",
+        "Check fitting clearance at the recorded hose length.",
         {
-          "sku": "FRA-220116-BL",
+          "sku": "FRA-224516-BL",
           "status": "Buy",
           "photoStatus": "Buy",
-          "source": "https://www.summitracing.com/parts/fra-220116-bl",
-          "image": "fra-220116-bl.jpg",
-          "caption": "Summit product photo."
+          "source": "https://www.summitracing.com/parts/fra-224516-bl"
         }
       ],
       [
@@ -1965,45 +1933,41 @@ window.OIL_CHAINS = [
         }
       ],
       [
-        "female",
+        "low90",
         "Tank vent hose end A",
-        "-16 AN female swivel × -16 hose",
-        "Straight Series 2000 end shown. Confirm angle on car.",
+        "90° · -16 AN female swivel × -16 hose",
+        "Check fitting clearance at the recorded hose length.",
         {
-          "sku": "FRA-220116-BL",
+          "sku": "FRA-229016-BL",
           "status": "Buy",
           "photoStatus": "Buy",
-          "source": "https://www.summitracing.com/parts/fra-220116-bl",
-          "image": "fra-220116-bl.jpg",
-          "caption": "Summit product photo."
+          "source": "https://www.summitracing.com/parts/fra-229016-bl"
         }
       ],
       [
         "hose",
         "Tank vent hose",
-        "-16 oil hose · cut to length",
-        "Measure routed length and order by the foot.",
+        "-16 oil hose · 12 in cut",
+        "Cut from the selected Fragola pack; check clearance at mock-up.",
         {
-          "sku": "FRA-840016",
+          "sku": "FRA-840616",
           "status": "Buy",
           "photoStatus": "Buy",
-          "source": "https://www.summitracing.com/parts/fra-840016",
+          "source": "https://www.summitracing.com/parts/fra-840616",
           "image": "fra-840016.jpg",
           "caption": "Fragola Premium Black Nylon Race Hose series photo."
         }
       ],
       [
-        "female",
+        "low90",
         "Tank vent hose end B",
-        "-16 AN female swivel × -16 hose",
-        "Straight Series 2000 end shown. Confirm angle on car.",
+        "90° · -16 AN female swivel × -16 hose",
+        "Check fitting clearance at the recorded hose length.",
         {
-          "sku": "FRA-220116-BL",
+          "sku": "FRA-229016-BL",
           "status": "Buy",
           "photoStatus": "Buy",
-          "source": "https://www.summitracing.com/parts/fra-220116-bl",
-          "image": "fra-220116-bl.jpg",
-          "caption": "Summit product photo."
+          "source": "https://www.summitracing.com/parts/fra-229016-bl"
         }
       ],
       [
@@ -2157,7 +2121,8 @@ window.OIL_CHAINS = [
         "specs": {
           "Main": "Welded male -16 AN",
           "HeaterFeed": "Plugged",
-          "HeaterReturn": "Welded male -6 AN → expansion tank bottom"
+          "HeaterReturn": "Welded male -6 AN → expansion tank bottom",
+          "Installed elbow": "Installed 90° hose end accepts the -16 coolant hose directly."
         },
         "note": "Main-flow routing shown as the intended circuit; confirm modified port identification on the installed pump."
       },
@@ -2173,10 +2138,10 @@ window.OIL_CHAINS = [
         "source": "https://motionraceworks.com/products/billet-ls-thermostat-adaptor-12an-16an-or-20an",
         "specs": {
           "Version": "-16 AN outlet version",
-          "Housing": "Female -16 ORB per user-specified mating adapter",
-          "Adapter": "Speedflow 922-16-BLK / Summit SFL-SF92216BLK; male -16 ORB to male -16 AN, 90°"
+          "Housing": "Motion Raceworks -16 version",
+          "Adapter": "Installed 90° male -16 AN fitting accepts a straight female -16 AN hose end."
         },
-        "note": "User selected Summit SFL-SF92216BLK. Manufacturer identifies a fixed -16 ORB to -16 AN 90° adapter. Confirm installed orientation, thread engagement and firewall clearance."
+        "note": "Elbow owned. Fit one straight FRA-220116-BL at the hose."
       },
       {
         "id": "X01",
@@ -2189,9 +2154,9 @@ window.OIL_CHAINS = [
         "image": "expansion.jpg",
         "source": "https://www.speedwaymotors.com/Speedway-Aluminum-Radiator-Coolant-Overflow-Expansion-Tank-8AN,1840.html",
         "specs": {
-          "Bottom": "Stock male -8 AN adapter → Fragola 220107-BL → -6 hose → pump heater return",
+          "Bottom": "Stock male -8 AN adapter → 90° Fragola 229007BL → -6 hose → pump heater return",
           "Side": "Welded male -8 AN → Summit VPE-10827 → VPE-11267 → 1/4 in ID steam hose",
-          "UnderCap": "Supplied orange hose to overflow bottle",
+          "UnderCap": "SUM-221002 to 5/16 in ID orange hose. Original brass fitting measures about 3/8 in OD at the large end. Verify 1/8-27 NPT with a thread gauge before ordering SUM-221002.",
           "Catalog": "91015710: inlet -8 AN; outlet -8 AN. AN flare interface, not ORB.",
           "BottomBase": "M25 × 1.50 tapped tank bottom, per Speedway specifications; retain stock adapter"
         },
@@ -2222,10 +2187,10 @@ window.OIL_CHAINS = [
         "w": 200,
         "h": 215,
         "image": "overflow.jpg",
-        "source": "https://www.amazon.com/dp/B07Y35ZNHM",
+        "source": "https://www.ievilenergy.com/products/coolant-overflow-tank-800ml",
         "specs": {
-          "Hose": "Orange hose supplied with bottle",
-          "Connection": "Expansion tank under-cap barb",
+          "Hose": "5/16 in ID orange hose; correct length owned",
+          "Connection": "Bottle inlet for 5/16 in ID hose",
           "Purchase": "Included hose; do not buy a duplicate"
         }
       }
@@ -2243,10 +2208,10 @@ window.OIL_CHAINS = [
           405
         ],
         "ends": [
-          "Pump welded male -16 AN",
+          "Installed water pump 90° hose end",
           "Hardline female -16 ORB → adapter → male -16 AN"
         ],
-        "detail": "Pump male -16 AN → Fragola FRA-220116-BL female -16 hose end → coolant-rated Fragola -16 hose (FRA-840616 6 ft length option) → same hose end → DRS CHH-3516-16AN-B male -16 AN / male -16 ORB → ACE 26065. Verify end angles and cut lengths."
+        "detail": "12 in of -16 hose from the installed pump hose end to one straight FRA-220116-BL at the hot hardline adapter."
       },
       {
         "id": "L02",
@@ -2263,7 +2228,7 @@ window.OIL_CHAINS = [
           "Hardline female -16 ORB → male -16 ORB / 35 mm barb",
           "Radiator hose neck: diameter to verify"
         ],
-        "detail": "ACE 26065 female -16 ORB bung → Aeroflow AF926-22-16BLK male -16 ORB / 35 mm barb → ASYXPCRH B0F1T27F4C 90° silicone elbow, 35 mm ID → radiator neck. Two elbows total; 5.4 mm wall, 4-ply construction, 4 in legs, black. Radiator neck diameter and fit remain to verify."
+        "detail": "L02: Owned elbow. ACE 26065 female -16 ORB bung → Aeroflow AF926-22-16BLK male -16 ORB / 35 mm barb → ASYXPCRH B0F1T27F4C 90° silicone elbow, 35 mm ID → radiator neck. Two elbows total; 5.4 mm wall, 4-ply construction, 4 in legs, black. Radiator neck diameter and fit remain to verify."
       },
       {
         "id": "L03",
@@ -2280,7 +2245,7 @@ window.OIL_CHAINS = [
           "Radiator hose neck: diameter to verify",
           "35 mm barb / male -16 ORB → hardline female -16 ORB"
         ],
-        "detail": "ACE 26065 female -16 ORB bung → Aeroflow AF926-22-16BLK male -16 ORB / 35 mm barb → ASYXPCRH B0F1T27F4C 90° silicone elbow, 35 mm ID → radiator neck. Two elbows total; 5.4 mm wall, 4-ply construction, 4 in legs, black. Radiator neck diameter and fit remain to verify."
+        "detail": "L03: Owned elbow. ACE 26065 female -16 ORB bung → Aeroflow AF926-22-16BLK male -16 ORB / 35 mm barb → ASYXPCRH B0F1T27F4C 90° silicone elbow, 35 mm ID → radiator neck. Two elbows total; 5.4 mm wall, 4-ply construction, 4 in legs, black. Radiator neck diameter and fit remain to verify."
       },
       {
         "id": "L04",
@@ -2295,9 +2260,9 @@ window.OIL_CHAINS = [
         ],
         "ends": [
           "Hardline female -16 ORB → adapter → male -16 AN",
-          "Thermostat female -16 ORB → Speedflow 922-16-BLK 90° → male -16 AN"
+          "Straight female -16 AN hose end to installed 90° male -16 AN fitting"
         ],
-        "detail": "ACE 26065 → DRS CHH-3516-16AN-B → Fragola FRA-220116-BL hose end → coolant-rated Fragola -16 hose (FRA-840616 length option) → same hose end → Speedflow 922-16-BLK → thermostat. Verify end angles and cut lengths."
+        "detail": "12 in of -16 hose with two straight FRA-220116-BL ends, one at the cold hardline and one at the installed thermostat elbow."
       },
       {
         "id": "L05",
@@ -2314,7 +2279,7 @@ window.OIL_CHAINS = [
           "Tank bottom stock male -8 AN flare",
           "Pump heater return welded male -6 AN flare"
         ],
-        "detail": "Tank male -8 AN → Summit FRA-220107-BL reducer hose end → coolant-rated -6 Fragola hose (FRA-840306 3 ft length option) → Summit FRA-220106-BL female -6 hose end → pump male -6 AN. Confirm cut length and angles."
+        "detail": "L05: 8 in cut. Tank bottom male -8 AN → 90° Fragola 229007BL reducer → Fragola -6 coolant hose → straight FRA-220106-BL → pump heater return."
       },
       {
         "id": "L06",
@@ -2331,7 +2296,7 @@ window.OIL_CHAINS = [
           "Stock L94 front steam outlet: 1/4 in barb for 1/4 in ID hose",
           "Expansion tank welded side male -8 AN (current Speedway listing)"
         ],
-        "detail": "Stock L94 1/4 in barb → 1/4 in ID coolant hose (Summit SUM-240425003, 3 ft length option) → Summit VPE-11267 female -4 AN / 1/4 in barb → Summit VPE-10827 male -4 AN / female -8 AN → tank welded male -8 AN."
+        "detail": "L06: 14 in cut. Stock L94 1/4 in barb → 1/4 in ID coolant hose (Summit SUM-240425003, 3 ft length option) → Summit VPE-11267 female -4 AN / 1/4 in barb → Summit VPE-10827 male -4 AN / female -8 AN → tank welded male -8 AN."
       },
       {
         "id": "L07",
@@ -2345,10 +2310,10 @@ window.OIL_CHAINS = [
           35
         ],
         "ends": [
-          "Expansion tank hose barb under cap",
-          "EVIL ENERGY bottle hose connection"
+          "Speedway under-cap port → SUM-221002 (verify thread)",
+          "EVIL ENERGY bottle inlet for 5/16 in ID hose"
         ],
-        "detail": "Use the orange hose supplied with the overflow bottle. Verify attachment and vent/recovery configuration on the actual bottle."
+        "detail": "Replace the small brass barb under the cap. Keep the 5/16 in ID orange hose and the bottle fitting. Original brass fitting measures about 3/8 in OD at the large end. Verify 1/8-27 NPT with a thread gauge before ordering SUM-221002."
       }
     ],
     "parts": [
@@ -2375,8 +2340,8 @@ window.OIL_CHAINS = [
         "Motion Raceworks 10-10019",
         1,
         "Female ORB housing; -16 AN version",
-        "Specified",
-        "Specified",
+        "Owned",
+        "Owner confirmed.",
         "T01"
       ],
       [
@@ -2453,73 +2418,73 @@ window.OIL_CHAINS = [
       ],
       [
         "P13",
-        "Fragola -16 coolant hose, Summit FRA-840616 6 ft length option",
-        "Length TBD",
-        "-16 AN, two rear hoses; combined cut length and end angles TBD",
-        "Length option",
-        "Summit Racing; to purchase after fit review",
+        "Fragola -16 coolant hose, Summit FRA-840616 6 ft pack",
+        1,
+        "12 in L01 + 12 in L04",
+        "Selected",
+        "Summit Racing",
         "L01"
       ],
       [
         "P14",
         "Fragola -16 hose ends, Summit FRA-220116-BL",
-        4,
-        "Female -16 AN; straight candidate; confirm hose series and angles",
-        "Proposed",
-        "Summit Racing; to purchase after fit review",
+        3,
+        "Two at the hardlines and one at the thermostat elbow",
+        "Buy",
+        "Summit Racing",
         "L04"
       ],
       [
         "P15",
-        "Speedflow 922-16-BLK thermostat adapter",
+        "Thermostat 90° adapter",
         1,
-        "90° male -16 ORB × male -16 AN; Summit SFL-SF92216BLK",
-        "Specified",
-        "Unconfirmed",
+        "Male -16 AN hose connection",
+        "Owned",
+        "Installed on the thermostat housing",
         "T01"
       ],
       [
         "P16",
-        "Fragola -6 coolant hose, Summit FRA-840306 3 ft length option",
-        "Length TBD",
-        "-6 AN, tank return; cut length TBD",
-        "Length option",
-        "Summit Racing; to purchase after fit review",
+        "Fragola -6 coolant hose, Summit FRA-840306 3 ft pack",
+        1,
+        "8 in L05",
+        "Selected",
+        "Summit Racing",
         "L05"
       ],
       [
         "P17",
-        "Fragola tank hose end, Summit FRA-220107-BL",
+        "90° tank reducer, Fragola 229007BL",
         1,
-        "Female -8 AN × -6 hose; Series 2000 straight",
-        "Proposed",
-        "Summit Racing; to purchase after fit review",
+        "Female -8 AN × -6 hose · FRA-229007-BL",
+        "Selected",
+        "Check fitting clearance at the recorded hose length.",
         "L05"
       ],
       [
         "P18",
         "Vibrant steam barb, Summit VPE-11267",
         1,
-        "Female -4 AN × 1/4 in barb; SKU EVCS21-00038BK-017-L",
+        "Female -4 AN × 1/4 in barb · VPE-11267",
         "Proposed",
         "Summit Racing; to purchase after fit review",
         "L06"
       ],
       [
         "P19",
-        "1/4 in steam hose, Summit SUM-240425003 3 ft length option",
-        "Length TBD",
-        "1/4 in ID coolant-rated; cut length TBD",
-        "Length option",
-        "Summit Racing; to purchase after fit review",
+        "1/4 in steam hose, Summit SUM-240425003 3 ft pack",
+        1,
+        "14 in L06",
+        "Selected",
+        "Summit Racing",
         "L06"
       ],
       [
         "P20",
         "Orange overflow hose",
         1,
-        "Tank under-cap barb → overflow",
-        "Included",
+        "5/16 in ID; correct length on hand",
+        "Owned",
         "Included with bottle",
         "L07"
       ],
@@ -2527,9 +2492,9 @@ window.OIL_CHAINS = [
         "P21",
         "Pressure cap",
         1,
-        "Pressure rating and neck compatibility TBD",
-        "TBD",
-        "Unconfirmed",
+        "Expansion tank pressure cap",
+        "Owned",
+        "Owner confirmed. Pressure rating not recorded.",
         "X01"
       ],
       [
@@ -2567,14 +2532,36 @@ window.OIL_CHAINS = [
         "Proposed",
         "Summit Racing; to purchase after fit review",
         "L06"
+      ],
+      [
+        "P26",
+        "Expansion tank overflow barb · SUM-221002",
+        1,
+        "Straight brass; 1/8-27 male NPT × 5/16 in barb",
+        "Verify thread",
+        "Original brass fitting measures about 3/8 in OD at the large end. Verify 1/8-27 NPT with a thread gauge before ordering SUM-221002.",
+        "L07"
+      ],
+      [
+        "P27",
+        "Coolant hose clamps",
+        "As required",
+        "Hose clamp hardware",
+        "Owned",
+        "Owner confirmed all required clamps on hand.",
+        "L02"
+      ],
+      [
+        "P28",
+        "Water pump 90° hose end",
+        1,
+        "Accepts -16 hose directly",
+        "Owned",
+        "Installed on the main pump outlet",
+        "L01"
       ]
     ],
     "issues": [
-      [
-        "Thermostat elbow clearance",
-        "Adapter selected: Summit SFL-SF92216BLK (Speedflow 922-16-BLK), male -16 ORB × male -16 AN, fixed 90°. Confirm final clocking, seal engagement and firewall clearance.",
-        "T01"
-      ],
       [
         "Radiator neck versus 35 mm barb",
         "Elbows confirmed as 35 mm ID at both ends, ASYXPCRH B0F1T27F4C. Verify radiator neck diameter and fit; prior 1.5 in estimate is 38.1 mm.",
@@ -2582,18 +2569,23 @@ window.OIL_CHAINS = [
       ],
       [
         "Return hose series and routing",
-        "Fragola Series 2000 ends FRA-220107-BL and FRA-220106-BL match coolant-rated Fragola hose FRA-840306. Measure length and check straight-end routing before ordering.",
+        "90° at the tank (229007BL) and straight at the pump (FRA-220106-BL). Check clearance with the 8 in cut.",
         "L05"
       ],
       [
         "Hose lengths, construction and angles",
-        "Fragola coolant-rated -16 and -6 hose families and matching ends are selected from Summit. Measure cut lengths and end angles; 6 ft and 3 ft packages are provisional options. Steam 1/4 in hose also has a 3 ft package option.",
+        "Fragola coolant-rated -16 and -6 hose families and matching ends are selected from Summit. Coolant cuts are 12, 12 and 8 in, and the steam hose cut is 14 in. Steam 1/4 in hose also has a 3 ft package option.",
         "L01"
       ],
       [
         "Fill, bleed and cap arrangement",
-        "Speedway says tank 91015710 does not include a cap. Confirm pressure rating and neck compatibility before selecting a Summit-listed cap; also confirm mounting height and bleed procedure.",
+        "Cap on hand. Confirm tank mounting height and bleed procedure.",
         "X01"
+      ],
+      [
+        "Expansion tank neck thread",
+        "Original brass fitting measures about 3/8 in OD at the large end. Verify 1/8-27 NPT with a thread gauge before ordering SUM-221002.",
+        "L07"
       ]
     ]
   },
@@ -2606,15 +2598,13 @@ window.OIL_CHAINS = [
       {
         "id": "FTD",
         "name": "Fuel tank",
-        "sub": "Ticon -10 ORB crossover",
+        "sub": "-10 ORB crossover",
         "x": 0,
         "y": 0,
         "w": 190,
         "h": 170,
-        "image": "fuel-ticon-bung.jpg",
-        "source": "https://www.ticonindustries.com/products/aluminum-an-orb-weld-bung?variant=49532112699667",
         "specs": {
-          "Crossover": "-10 ORB female Ticon bung",
+          "Crossover": "Installed -10 ORB weld bung",
           "Lift": "DW100 via one active hanger position",
           "Overflow": "Hanger RETURN port receives surge overflow; thread verify"
         },
@@ -2623,15 +2613,13 @@ window.OIL_CHAINS = [
       {
         "id": "FTP",
         "name": "Fuel tank",
-        "sub": "Ticon -10 ORB crossover",
+        "sub": "-10 ORB crossover",
         "x": 0,
         "y": 0,
         "w": 190,
         "h": 170,
-        "image": "fuel-ticon-bung.jpg",
-        "source": "https://www.ticonindustries.com/products/aluminum-an-orb-weld-bung?variant=49532112699667",
         "specs": {
-          "Crossover": "-10 ORB female Ticon bung",
+          "Crossover": "Installed -10 ORB weld bung",
           "Lift": "DW100 via one active hanger position",
           "Vent": "TBD"
         },
@@ -2773,7 +2761,7 @@ window.OIL_CHAINS = [
           "DW100/hat active outlet",
           "Surge SUPPLY -8 ORB"
         ],
-        "detail": "Dedicated -8 PTFE line with supplied surge SUPPLY adapter.",
+        "detail": "F01a: 8 in cut; F01b: 16 in cut. Dedicated -8 PTFE line with supplied surge SUPPLY adapter. Hose ends in flow order: straight → 90°.",
         "color": "#3a83b6"
       },
       {
@@ -2790,7 +2778,7 @@ window.OIL_CHAINS = [
           "DW100/hat active outlet",
           "Surge OUTLET2 -8 ORB, custom inlet"
         ],
-        "detail": "Dedicated -8 PTFE line with additional -8 ORB adapter.",
+        "detail": "F02a: 8 in cut; F02b: 45 in cut. Dedicated -8 PTFE line with additional -8 ORB adapter. Hose ends in flow order: 90° → 90°.",
         "color": "#3a83b6"
       },
       {
@@ -2807,7 +2795,7 @@ window.OIL_CHAINS = [
           "Surge OUTLET1 -8 ORB",
           "Mallory upper -8 AN inlet"
         ],
-        "detail": "Single DW200, -8 PTFE, 10 µm filter with proposed supplied -8 adapters, then purchased SUM-220165B into the Mallory upper inlet.",
+        "detail": "F03a: 8 in cut; F03b: 18 in cut; F03c: 22 in cut. Single DW200, -8 PTFE, 10 µm filter with proposed supplied -8 adapters, then purchased SUM-220165B into the Mallory upper inlet.",
         "color": "#c55b43"
       },
       {
@@ -2824,7 +2812,7 @@ window.OIL_CHAINS = [
           "3/8 NPT regulated outlet",
           "Russell 644123 -6 AN rail adapter"
         ],
-        "detail": "3/8 NPT-to--6 AN adapter, -6 PTFE hose, stock LS3 quick connect.",
+        "detail": "F04: 15 in cut. 3/8 NPT-to--6 AN adapter, -6 PTFE hose, stock LS3 quick connect. Hose ends in flow order: 45° → 90°.",
         "color": "#c55b43"
       },
       {
@@ -2841,7 +2829,7 @@ window.OIL_CHAINS = [
           "Mallory bottom -8 AN bypass",
           "Surge RETURN -8 ORB"
         ],
-        "detail": "-8 PTFE return using purchased SUM-220165B at the Mallory lower bypass and the supplied surge RETURN adapter.",
+        "detail": "F05: 25 in cut. -8 PTFE return using purchased SUM-220165B at the Mallory lower bypass and the supplied surge RETURN adapter. Hose ends in flow order: 90° → 90°.",
         "color": "#8b6ab5"
       },
       {
@@ -2858,7 +2846,7 @@ window.OIL_CHAINS = [
           "Surge OVERFLOW -8 ORB / -6 flare",
           "Overflow-side hanger RETURN -8 ORB likely; verify"
         ],
-        "detail": "-6 PTFE to existing overflow-side hanger RETURN port via proposed -8 ORB-to--6 AN reducer. Verify overflow capacity and active pump controls.",
+        "detail": "F06: 16 in cut. -6 PTFE to existing overflow-side hanger RETURN port via proposed -8 ORB-to--6 AN reducer. Verify overflow capacity and active pump controls. Hose ends in flow order: 90° → straight.",
         "color": "#d18c3a"
       },
       {
@@ -2872,10 +2860,10 @@ window.OIL_CHAINS = [
           0
         ],
         "ends": [
-          "Overflow-side Ticon -10 ORB",
-          "Other Ticon -10 ORB"
+          "Overflow-side -10 ORB bung",
+          "Other tank -10 ORB bung"
         ],
-        "detail": "Two -10 ORB/AN adapters, -10 PTFE crossover, four end fittings.",
+        "detail": "F07: 22 in cut. Two -10 ORB/AN adapters, -10 PTFE crossover, four end fittings.",
         "color": "#729659"
       },
       {
@@ -2892,7 +2880,7 @@ window.OIL_CHAINS = [
           "Spare 3/8 NPT regulated outlet",
           "Haltech 1/8 NPT sensor"
         ],
-        "detail": "Engine-mounted Mallory spare 3/8 NPT regulated outlet → DER-98450 reducer → HT-039103 adapter, 18 in -4 AN braided hose and sensor adapter → chassis-mounted HT-010910. Allow for engine motion.",
+        "detail": "F08: Supplied kit hose is sufficient. Engine-mounted Mallory spare 3/8 NPT regulated outlet → DER-98450 reducer → HT-039103 adapter, 18 in -4 AN braided hose and sensor adapter → chassis-mounted HT-010910. Allow for engine motion.",
         "color": "#9b7667"
       },
       {
@@ -2909,7 +2897,7 @@ window.OIL_CHAINS = [
           "Two hanger outlet #2 ports",
           "Other hanger RETURN and regulator outlet #3"
         ],
-        "detail": "Separate closures: two hanger plugs conditional on actual port, one unused hanger RETURN, one Mallory supplied 3/8 NPT plug. Surge OUTLET2 is an active lift inlet.",
+        "detail": "Three hanger closures: OUTLET2 on both main tanks and RETURN on the tank that does not receive overflow. Verify the bare ports are -8 ORB. The Mallory uses its supplied 3/8 in NPT plug. All five surge tank ports have hoses.",
         "color": "#7b8790"
       }
     ],
@@ -2918,7 +2906,7 @@ window.OIL_CHAINS = [
         "F-P001",
         "Fuel tank receiving overflow",
         1,
-        "Ticon -10 ORB lower crossover; existing hanger RETURN for overflow",
+        "Welded -10 ORB lower crossover; existing hanger RETURN for overflow",
         "Existing",
         "User supplied STEP model",
         "FTD"
@@ -2927,7 +2915,7 @@ window.OIL_CHAINS = [
         "F-P002",
         "Other fuel tank",
         1,
-        "Ticon -10 ORB lower crossover",
+        "Welded -10 ORB lower crossover",
         "Existing",
         "User specified",
         "FTP"
@@ -2937,8 +2925,8 @@ window.OIL_CHAINS = [
         "AC PERFORMANCE dual-pump hanger",
         2,
         "B0F1XVTH9K; OUTLET1 active, OUTLET2 plugged; one RETURN receives overflow, other RETURN plugged",
-        "User specified",
-        "Inspect supplied fittings and bare port threads",
+        "Owned",
+        "Owner confirmed both hangers. Inspect supplied fittings and bare port threads.",
         "FHTD"
       ],
       [
@@ -2989,8 +2977,8 @@ window.OIL_CHAINS = [
       [
         "F-P009",
         "Pump-to-hat submersible hose",
-        2,
-        "5/16 in ID at pump · hat end TBD; DAC-80160",
+        1,
+        "5/16 in ID at pump · hat end TBD · 8 in cut · DAC-80160",
         "Proposed",
         "Dayco 80160 is an optional submersible 5/16 in hose. Inspect hat inner barb; listing mentions 3/8 in, which needs a compatible transition.",
         "F01"
@@ -3017,7 +3005,7 @@ window.OIL_CHAINS = [
         "F-P012",
         "-8 PTFE hose — overflow-side lift to surge SUPPLY",
         1,
-        "-8 PTFE; cut length TBD; SUM-H2-08-10-BLK",
+        "-8 PTFE · 16 in cut · SUM-H2-08-15-BLK",
         "Proposed",
         "Cut and pressure test after routing. Use matched Summit HE2 hose ends.",
         "F01"
@@ -3026,9 +3014,9 @@ window.OIL_CHAINS = [
         "F-P013",
         "-8 female PTFE hose end — surge SUPPLY",
         1,
-        "-8 AN female swivel × -8 PTFE hose; SUM-HE2-08-STB",
+        "90° · -8 AN female swivel × -8 PTFE hose · SUM-HE2-08-90B",
         "Proposed",
-        "Straight shown; select angle after mock-up.",
+        "Check fitting clearance at the recorded hose length.",
         "F01"
       ],
       [
@@ -3068,6 +3056,15 @@ window.OIL_CHAINS = [
         "F02"
       ],
       [
+        "F02-H",
+        "Pump-to-hat submersible hose",
+        1,
+        "5/16 in ID at pump · hat end TBD · 8 in cut · DAC-80160",
+        "Verify",
+        "Dayco 80160 is an optional submersible 5/16 in hose. Inspect hat inner barb; listing mentions 3/8 in, which needs a compatible transition.",
+        "F02"
+      ],
+      [
         "F-P018",
         "Other hat pump outlet #1",
         1,
@@ -3080,16 +3077,16 @@ window.OIL_CHAINS = [
         "F-P019",
         "-8 female PTFE hose end — other hat",
         1,
-        "-8 AN female swivel × -8 PTFE hose; SUM-HE2-08-STB",
+        "90° · -8 AN female swivel × -8 PTFE hose · SUM-HE2-08-90B",
         "Proposed",
-        "Straight shown; select angle after mock-up.",
+        "Check fitting clearance at the recorded hose length.",
         "F02"
       ],
       [
         "F-P020",
         "-8 PTFE hose — other lift to surge OUTLET2",
         1,
-        "-8 PTFE; cut length TBD; SUM-H2-08-10-BLK",
+        "-8 PTFE · 45 in cut · SUM-H2-08-15-BLK",
         "Proposed",
         "Cut and pressure test after routing. Use matched Summit HE2 hose ends.",
         "F02"
@@ -3098,9 +3095,9 @@ window.OIL_CHAINS = [
         "F-P021",
         "-8 female PTFE hose end — surge OUTLET2",
         1,
-        "-8 AN female swivel × -8 PTFE hose; SUM-HE2-08-STB",
+        "90° · -8 AN female swivel × -8 PTFE hose · SUM-HE2-08-90B",
         "Proposed",
-        "Straight shown; select angle after mock-up.",
+        "Check fitting clearance at the recorded hose length.",
         "F02"
       ],
       [
@@ -3143,7 +3140,7 @@ window.OIL_CHAINS = [
         "F-P026",
         "DW200 internal outlet hose",
         1,
-        "5/16 in ID at pump · hat end TBD; DAC-80160",
+        "5/16 in ID at pump · hat end TBD · 8 in cut · DAC-80160",
         "Proposed",
         "Use surge supplied internal hose if it fits DW200; otherwise Dayco 80160 is a candidate. Verify internal hat barb.",
         "F03"
@@ -3170,7 +3167,7 @@ window.OIL_CHAINS = [
         "F-P029",
         "-8 PTFE hose — pressure feed to filter",
         1,
-        "-8 PTFE; cut length TBD; SUM-H2-08-10-BLK",
+        "-8 PTFE · 18 in cut · SUM-H2-08-15-BLK",
         "Proposed",
         "Cut and pressure test after routing. Use matched Summit HE2 hose ends.",
         "F03"
@@ -3188,9 +3185,9 @@ window.OIL_CHAINS = [
         "F-P031",
         "Filter inlet -8 adapter",
         1,
-        "Filter body port × -8 AN male; actual variant verify; Included / unverified",
-        "Proposed",
-        "Use supplied adapter only after identifying purchased filter body.",
+        "Filter port to male -8 AN · SUM-220165B only if bare port is -8 ORB",
+        "Verify port",
+        "Check the owned filter and supplied adapters first. If the bare port is -8 ORB and a replacement is needed, use SUM-220165B. Identify any other port before ordering.",
         "F03"
       ],
       [
@@ -3206,9 +3203,9 @@ window.OIL_CHAINS = [
         "F-P033",
         "Filter outlet -8 adapter",
         1,
-        "Filter body port × -8 AN male; actual variant verify; Included / unverified",
-        "Proposed",
-        "Use supplied adapter only after identifying purchased filter body.",
+        "Filter port to male -8 AN · SUM-220165B only if bare port is -8 ORB",
+        "Verify port",
+        "Check the owned filter and supplied adapters first. If the bare port is -8 ORB and a replacement is needed, use SUM-220165B. Identify any other port before ordering.",
         "F03"
       ],
       [
@@ -3224,7 +3221,7 @@ window.OIL_CHAINS = [
         "F-P035",
         "-8 PTFE hose — filter to Mallory",
         1,
-        "-8 PTFE; cut length TBD; SUM-H2-08-10-BLK",
+        "-8 PTFE · 22 in cut · SUM-H2-08-15-BLK",
         "Proposed",
         "Cut and pressure test after routing. Use matched Summit HE2 hose ends.",
         "F03"
@@ -3260,16 +3257,16 @@ window.OIL_CHAINS = [
         "F-P039",
         "-6 female PTFE hose end — regulator outlet",
         1,
-        "-6 AN female swivel × -6 PTFE hose; SUM-HE2-06-STB",
+        "45° · -6 AN female swivel × -6 PTFE hose · SUM-HE2-06-45B",
         "Proposed",
-        "Straight shown; select angle after mock-up.",
+        "Check fitting clearance at the recorded hose length.",
         "F04"
       ],
       [
         "F-P040",
         "-6 PTFE hose — rail feed",
         1,
-        "-6 PTFE; cut length TBD; SUM-H2-06-10-BLK",
+        "-6 PTFE · 15 in cut · SUM-H2-06-10-BLK",
         "Proposed",
         "Cut and pressure test after routing. Use matched Summit HE2 hose ends.",
         "F04"
@@ -3278,9 +3275,9 @@ window.OIL_CHAINS = [
         "F-P041",
         "-6 female PTFE hose end — rail",
         1,
-        "-6 AN female swivel × -6 PTFE hose; SUM-HE2-06-STB",
+        "90° · -6 AN female swivel × -6 PTFE hose · SUM-HE2-06-90B",
         "Proposed",
-        "Straight shown; select angle after mock-up.",
+        "Check fitting clearance at the recorded hose length.",
         "F04"
       ],
       [
@@ -3305,16 +3302,16 @@ window.OIL_CHAINS = [
         "F-P044",
         "-8 female PTFE hose end — Mallory bypass",
         1,
-        "-8 AN female swivel × -8 PTFE hose; SUM-HE2-08-STB",
+        "90° · -8 AN female swivel × -8 PTFE hose · SUM-HE2-08-90B",
         "Proposed",
-        "Straight shown; select angle after mock-up.",
+        "Check fitting clearance at the recorded hose length.",
         "F05"
       ],
       [
         "F-P045",
         "-8 PTFE hose — bypass return",
         1,
-        "-8 PTFE; cut length TBD; SUM-H2-08-10-BLK",
+        "-8 PTFE · 25 in cut · SUM-H2-08-15-BLK",
         "Proposed",
         "Cut and pressure test after routing. Use matched Summit HE2 hose ends.",
         "F05"
@@ -3323,9 +3320,9 @@ window.OIL_CHAINS = [
         "F-P046",
         "-8 female PTFE hose end — surge RETURN",
         1,
-        "-8 AN female swivel × -8 PTFE hose; SUM-HE2-08-STB",
+        "90° · -8 AN female swivel × -8 PTFE hose · SUM-HE2-08-90B",
         "Proposed",
-        "Straight shown; select angle after mock-up.",
+        "Check fitting clearance at the recorded hose length.",
         "F05"
       ],
       [
@@ -3350,16 +3347,16 @@ window.OIL_CHAINS = [
         "F-P049",
         "-6 female PTFE hose end — surge OVERFLOW",
         1,
-        "-6 AN female swivel × -6 PTFE hose; SUM-HE2-06-STB",
+        "90° · -6 AN female swivel × -6 PTFE hose · SUM-HE2-06-90B",
         "Proposed",
-        "Straight shown; select angle after mock-up.",
+        "Check fitting clearance at the recorded hose length.",
         "F06"
       ],
       [
         "F-P050",
         "-6 PTFE hose — overflow to overflow-side hanger",
         1,
-        "-6 PTFE; cut length TBD; SUM-H2-06-10-BLK",
+        "-6 PTFE · 16 in cut · SUM-H2-06-10-BLK",
         "Proposed",
         "Cut and pressure test after routing. Use matched Summit HE2 hose ends.",
         "F06"
@@ -3395,9 +3392,9 @@ window.OIL_CHAINS = [
         "F-P054",
         "Overflow-side -10 ORB weld bung",
         1,
-        "-10 ORB female; aluminum; -10 AN ORB weld bung",
-        "Proposed",
-        "User-specified Ticon bung, low tank location.",
+        "Female -10 ORB crossover weld bung",
+        "Installed",
+        "Owner confirmed both crossover bungs are welded into the finished tanks.",
         "F07"
       ],
       [
@@ -3406,7 +3403,7 @@ window.OIL_CHAINS = [
         1,
         "-10 ORB male × -10 AN male; O-ring; SUM-220164B",
         "Proposed",
-        "Thread into Ticon bung.",
+        "Thread into matching -10 ORB tank bung.",
         "F07"
       ],
       [
@@ -3422,7 +3419,7 @@ window.OIL_CHAINS = [
         "F-P057",
         "-10 PTFE hose — tank crossover",
         1,
-        "-10 PTFE; cut length TBD; SUM-H2-10-10-BLK",
+        "-10 PTFE · 22 in cut · SUM-H2-10-10-BLK",
         "Proposed",
         "Cut and pressure test after routing. Use matched Summit HE2 hose ends.",
         "F07"
@@ -3442,16 +3439,16 @@ window.OIL_CHAINS = [
         1,
         "-10 ORB male × -10 AN male; O-ring; SUM-220164B",
         "Proposed",
-        "Thread into Ticon bung.",
+        "Thread into matching -10 ORB tank bung.",
         "F07"
       ],
       [
         "F-P060",
         "Other -10 ORB weld bung",
         1,
-        "-10 ORB female; aluminum; -10 AN ORB weld bung",
-        "Proposed",
-        "User-specified Ticon bung, matching low elevation.",
+        "Female -10 ORB crossover weld bung",
+        "Installed",
+        "Owner confirmed both crossover bungs are welded into the finished tanks.",
         "F07"
       ],
       [
@@ -3485,9 +3482,9 @@ window.OIL_CHAINS = [
         "F-P064",
         "Haltech flexible extension",
         1,
-        "18 in · -4 AN female ends · braided stainless pressure hose; HTH-HT-039103",
+        "18 in · -4 AN female ends · braided stainless pressure hose · HTH-HT-039103",
         "Proposed",
-        "One HT-039103 kit includes hose, 1/8 NPT adapters and insulated P-clamps; anchor sensor on chassis and allow for engine motion.",
+        "One HT-039103 kit includes hose, 1/8 NPT adapters and insulated P-clamps; anchor sensor on chassis and allow for engine motion. Supplied kit hose is sufficient.",
         "F08"
       ],
       [
@@ -3522,7 +3519,7 @@ window.OIL_CHAINS = [
         "Overflow-side hat outlet #2 plug",
         1,
         "-8 ORB male plug if bare ORB port; SUM-220228B-8",
-        "Proposed",
+        "Buy / verify bare port",
         "If supplied AN adapter remains installed, use SUM-220840B -8 AN flare cap instead.",
         "F09"
       ],
@@ -3540,7 +3537,7 @@ window.OIL_CHAINS = [
         "Other hat outlet #2 plug",
         1,
         "-8 ORB male plug if bare ORB port; SUM-220228B-8",
-        "Proposed",
+        "Buy / verify bare port",
         "If supplied AN adapter remains installed, use SUM-220840B -8 AN flare cap instead.",
         "F09"
       ],
@@ -3558,7 +3555,7 @@ window.OIL_CHAINS = [
         "Other RETURN port plug",
         1,
         "-8 ORB male plug if bare ORB port; SUM-220228B-8",
-        "Proposed",
+        "Buy / verify bare port",
         "If a supplied AN adapter remains installed, use SUM-220840B -8 AN flare cap instead.",
         "F09"
       ],
@@ -3597,6 +3594,15 @@ window.OIL_CHAINS = [
         "Proposed",
         "Conditional alternative for either OUTLET2 or other RETURN. Use instead of an ORB plug, never in series.",
         "F09"
+      ],
+      [
+        "F-CLAMPS",
+        "Fuel hose clamps",
+        "As required",
+        "Hose clamp hardware",
+        "Owned",
+        "Owner confirmed all required clamps on hand.",
+        "F01"
       ]
     ],
     "issues": [
@@ -3636,8 +3642,8 @@ window.OIL_CHAINS = [
         "FSUR"
       ],
       [
-        "Measure fabricated hoses",
-        "All -6, -8 and -10 hose lengths and end angles require car measurements; 10 ft roll SKUs are sourcing examples, not cut lengths. Keep PTFE hose and HE2 ends in the matching Summit family.",
+        "Verify fuel hose routing",
+        "The -8 cuts total 126 in; use the 15 ft pack. Check the listed angles at mock-up. Match Summit HE2 ends to compatible PTFE hose.",
         "F03"
       ],
       [
@@ -3762,7 +3768,7 @@ window.OIL_CHAINS = [
           "-12 ORB male × -16 AN male",
           "-16 AN male flare"
         ],
-        "detail": "Tank bottom adapter → Pump suction hose end A → Pump suction hose → Pump suction hose end B → Pressure inlet",
+        "detail": "OIL1: 35 in cut. Tank bottom adapter → Pump suction hose end A → Pump suction hose → Pump suction hose end B → Pressure inlet",
         "path": "",
         "label": [
           0,
@@ -3779,7 +3785,7 @@ window.OIL_CHAINS = [
           "-12 AN male flare",
           "M22×1.5 male × -12 AN male"
         ],
-        "detail": "Pressure outlet → Cooler feed hose end A → Cooler feed hose → Cooler feed hose end B → Cooler inlet adapter",
+        "detail": "OIL2: 60 in cut. Pressure outlet → Cooler feed hose end A → Cooler feed hose → Cooler feed hose end B → Cooler inlet adapter Hose ends in flow order: 90° → 90°.",
         "path": "",
         "label": [
           0,
@@ -3796,7 +3802,7 @@ window.OIL_CHAINS = [
           "M22×1.5 male × -12 AN male",
           "-10 ORB male × -12 AN male"
         ],
-        "detail": "Cooler outlet adapter → Cooled pressure hose end A → Cooled pressure hose → Filter inlet U-bend → Filter mount IN adapter",
+        "detail": "OIL3: 38 in cut. Cooler outlet adapter → Cooled pressure hose end A → Cooled pressure hose → Filter inlet U-bend → Filter mount IN adapter Hose ends in flow order: 90° → 180°.",
         "path": "",
         "label": [
           0,
@@ -3813,7 +3819,7 @@ window.OIL_CHAINS = [
           "-10 ORB male × -10 AN male",
           "16 mm fitting to OEM block"
         ],
-        "detail": "Filter mount OUT adapter → Block feed hose end A → Block feed hose → Block feed hose end B → OEM block feed fitting → Block fitting crush washer",
+        "detail": "OIL4: 22 in cut. Filter mount OUT adapter → Block feed hose end A → Block feed hose → Block feed hose end B → OEM block feed fitting → Block fitting crush washer Hose ends in flow order: 90° → 90°.",
         "path": "",
         "label": [
           0,
@@ -3830,7 +3836,7 @@ window.OIL_CHAINS = [
           "-16 AN male flare",
           "-12 ORB male × -16 AN male"
         ],
-        "detail": "Scavenge outlet → Scavenge discharge hose end A → Scavenge discharge hose → Scavenge discharge hose end B → XRP scavenge filter → Filtered return hose end A → Filtered return hose → Filtered return hose end B → Tank return adapter",
+        "detail": "OIL5a: 30 in cut; OIL5b: 6 in cut. Scavenge outlet → Scavenge discharge hose end A → Scavenge discharge hose → Scavenge discharge hose end B → XRP scavenge filter → Filtered return hose end A → Filtered return hose → Filtered return hose end B → Tank return adapter Hose ends in flow order: 45° → 90° → 45° → 45°.",
         "path": "",
         "label": [
           0,
@@ -3847,7 +3853,7 @@ window.OIL_CHAINS = [
           "-12 ORB male × -16 AN male",
           "-12 ORB male × -16 AN male"
         ],
-        "detail": "Tank vent adapter → Tank vent hose end A → Tank vent hose → Tank vent hose end B → Breather inlet adapter",
+        "detail": "OIL6: 12 in cut. Tank vent adapter → Tank vent hose end A → Tank vent hose → Tank vent hose end B → Breather inlet adapter Hose ends in flow order: 90° → 90°.",
         "path": "",
         "label": [
           0,
@@ -3959,9 +3965,9 @@ window.OIL_CHAINS = [
         "OIL1-3",
         "Pump suction hose",
         1,
-        "-16 oil hose · cut to length · FRA-840016",
+        "-16 oil hose · 35 in cut · FRA-840616",
         "Verify",
-        "Confirm hot-oil suction/collapse rating, bend radius and reinforcement with Dailey/Fragola before ordering.",
+        "Fragola rates this -16 hose at 28 inHg vacuum with a 5.5 in minimum bend radius. Verify the installed routing and hot-oil suction requirements with Dailey.",
         "OIL1"
       ],
       [
@@ -3995,27 +4001,27 @@ window.OIL_CHAINS = [
         "OIL2-2",
         "Cooler feed hose end A",
         1,
-        "-12 AN female swivel × -12 hose · FRA-220112-BL",
+        "90° · -12 AN female swivel × -12 hose · FRA-229012-BL",
         "Buy",
-        "Straight Series 2000 end shown. Confirm angle on car.",
+        "Check fitting clearance at the recorded hose length.",
         "OIL2"
       ],
       [
         "OIL2-3",
         "Cooler feed hose",
         1,
-        "-12 oil hose · cut to length · FRA-840012",
+        "-12 oil hose · 60 in cut · FRA-841012",
         "Buy",
-        "Measure routed length and order by the foot.",
+        "Cut from the selected Fragola pack; check clearance at mock-up.",
         "OIL2"
       ],
       [
         "OIL2-4",
         "Cooler feed hose end B",
         1,
-        "-12 AN female swivel × -12 hose · FRA-220112-BL",
+        "90° · -12 AN female swivel × -12 hose · FRA-229012-BL",
         "Buy",
-        "Straight Series 2000 end shown. Confirm angle on car.",
+        "Check fitting clearance at the recorded hose length.",
         "OIL2"
       ],
       [
@@ -4040,18 +4046,18 @@ window.OIL_CHAINS = [
         "OIL3-2",
         "Cooled pressure hose end A",
         1,
-        "-12 AN female swivel × -12 hose · FRA-220112-BL",
+        "90° · -12 AN female swivel × -12 hose · FRA-229012-BL",
         "Buy",
-        "Straight Series 2000 end shown. Confirm angle on car.",
+        "Check fitting clearance at the recorded hose length.",
         "OIL3"
       ],
       [
         "OIL3-3",
         "Cooled pressure hose",
         1,
-        "-12 oil hose · cut to length · FRA-840012",
+        "-12 oil hose · 38 in cut · FRA-841012",
         "Buy",
-        "Measure routed length and order by the foot.",
+        "Cut from the selected Fragola pack; check clearance at mock-up.",
         "OIL3"
       ],
       [
@@ -4085,27 +4091,27 @@ window.OIL_CHAINS = [
         "OIL4-2",
         "Block feed hose end A",
         1,
-        "-10 AN female swivel × -10 hose · FRA-220110-BL",
+        "90° · -10 AN female swivel × -10 hose · FRA-229010-BL",
         "Buy",
-        "Straight Series 2000 end shown. Confirm angle on car.",
+        "Check fitting clearance at the recorded hose length.",
         "OIL4"
       ],
       [
         "OIL4-3",
         "Block feed hose",
         1,
-        "-10 oil hose · cut to length · FRA-840010",
+        "-10 oil hose · 22 in cut · FRA-840610",
         "Buy",
-        "Measure routed length and order by the foot.",
+        "Cut from the selected Fragola pack; check clearance at mock-up.",
         "OIL4"
       ],
       [
         "OIL4-4",
         "Block feed hose end B",
         1,
-        "-10 AN female swivel × -10 hose · FRA-220110-BL",
+        "90° · -10 AN female swivel × -10 hose · FRA-229010-BL",
         "Buy",
-        "Straight Series 2000 end shown. Confirm angle on car.",
+        "Check fitting clearance at the recorded hose length.",
         "OIL4"
       ],
       [
@@ -4139,27 +4145,27 @@ window.OIL_CHAINS = [
         "OIL5-2",
         "Scavenge discharge hose end A",
         1,
-        "-16 AN female swivel × -16 hose · FRA-220116-BL",
+        "45° · -16 AN female swivel × -16 hose · FRA-224516-BL",
         "Buy",
-        "Straight Series 2000 end shown. Confirm angle on car.",
+        "Check fitting clearance at the recorded hose length.",
         "OIL5"
       ],
       [
         "OIL5-3",
         "Scavenge discharge hose",
         1,
-        "-16 oil hose · cut to length · FRA-840016",
+        "-16 oil hose · 30 in cut · FRA-840616",
         "Buy",
-        "Measure routed length and order by the foot.",
+        "Cut from the selected Fragola pack; check clearance at mock-up.",
         "OIL5"
       ],
       [
         "OIL5-4",
         "Scavenge discharge hose end B",
         1,
-        "-16 AN female swivel × -16 hose · FRA-220116-BL",
+        "90° · -16 AN female swivel × -16 hose · FRA-229016-BL",
         "Buy",
-        "Straight Series 2000 end shown. Confirm angle on car.",
+        "Check fitting clearance at the recorded hose length.",
         "OIL5"
       ],
       [
@@ -4175,27 +4181,27 @@ window.OIL_CHAINS = [
         "OIL5-6",
         "Filtered return hose end A",
         1,
-        "-16 AN female swivel × -16 hose · FRA-220116-BL",
+        "45° · -16 AN female swivel × -16 hose · FRA-224516-BL",
         "Buy",
-        "Straight Series 2000 end shown. Confirm angle on car.",
+        "Check fitting clearance at the recorded hose length.",
         "OIL5"
       ],
       [
         "OIL5-7",
         "Filtered return hose",
         1,
-        "-16 oil hose · cut to length · FRA-840016",
+        "-16 oil hose · 6 in cut · FRA-840616",
         "Buy",
-        "Measure routed length and order by the foot.",
+        "Cut from the selected Fragola pack; check clearance at mock-up.",
         "OIL5"
       ],
       [
         "OIL5-8",
         "Filtered return hose end B",
         1,
-        "-16 AN female swivel × -16 hose · FRA-220116-BL",
+        "45° · -16 AN female swivel × -16 hose · FRA-224516-BL",
         "Buy",
-        "Straight Series 2000 end shown. Confirm angle on car.",
+        "Check fitting clearance at the recorded hose length.",
         "OIL5"
       ],
       [
@@ -4220,27 +4226,27 @@ window.OIL_CHAINS = [
         "OIL6-2",
         "Tank vent hose end A",
         1,
-        "-16 AN female swivel × -16 hose · FRA-220116-BL",
+        "90° · -16 AN female swivel × -16 hose · FRA-229016-BL",
         "Buy",
-        "Straight Series 2000 end shown. Confirm angle on car.",
+        "Check fitting clearance at the recorded hose length.",
         "OIL6"
       ],
       [
         "OIL6-3",
         "Tank vent hose",
         1,
-        "-16 oil hose · cut to length · FRA-840016",
+        "-16 oil hose · 12 in cut · FRA-840616",
         "Buy",
-        "Measure routed length and order by the foot.",
+        "Cut from the selected Fragola pack; check clearance at mock-up.",
         "OIL6"
       ],
       [
         "OIL6-4",
         "Tank vent hose end B",
         1,
-        "-16 AN female swivel × -16 hose · FRA-220116-BL",
+        "90° · -16 AN female swivel × -16 hose · FRA-229016-BL",
         "Buy",
-        "Straight Series 2000 end shown. Confirm angle on car.",
+        "Check fitting clearance at the recorded hose length.",
         "OIL6"
       ],
       [
@@ -4301,12 +4307,12 @@ window.OIL_CHAINS = [
     "issues": [
       [
         "Pump suction hose",
-        "Confirm collapse resistance for the installed hot-oil suction run before ordering.",
+        "Check the 35 in suction route against Dailey pump requirements and the Fragola minimum bend radius of 5.5 in. Fragola lists 28 inHg vacuum and does not give a separate hot-oil vacuum rating.",
         "OIL1"
       ],
       [
-        "Measure all seven hoses",
-        "Select lengths and hose-end angles at mock-up.",
+        "Check oil hose routing",
+        "All seven cuts recorded; check the specified end angles and clearances at mock-up.",
         "OIL1"
       ],
       [
@@ -4359,37 +4365,35 @@ window.OIL_CHAINS = [
       {
         "id": "BFT",
         "name": "Front sensor tee",
-        "sub": "M10×1 ISO bubble",
+        "sub": "Delta ABS · M10×1 DIN/ISO bubble flare",
         "x": 970,
         "y": 185,
         "w": 205,
         "h": 145,
-        "image": "delta-tee.png",
         "specs": {
           "Ports": "Three M10×1 ISO/DIN bubble-flare interfaces",
           "Sensor": "Delta supplied M10×1 pressure sensor",
           "Inlet": "Requires -3 AN master outlet to M10 bubble transition",
           "Outlet": "To HCU MC1; front circuit only"
         },
-        "note": "Delta tee is shown as the preferred junction. It cannot attach directly to a Tilton -3 AN flare outlet.",
+        "note": "Buy one Delta tee per master cylinder outlet. Summit OPS-UT10B-1 is a possible substitute pending sensor-seat verification.",
         "source": "https://www.deltaabs.com/products/m10-bubble-tee"
       },
       {
         "id": "BRT",
         "name": "Rear sensor tee",
-        "sub": "M10×1 ISO bubble",
+        "sub": "Delta ABS · M10×1 DIN/ISO bubble flare",
         "x": 970,
         "y": 590,
         "w": 205,
         "h": 145,
-        "image": "delta-tee.png",
         "specs": {
           "Ports": "Three M10×1 ISO/DIN bubble-flare interfaces",
           "Sensor": "Second supplied Delta M10×1 pressure sensor",
           "Inlet": "Requires -3 AN master outlet to M10 bubble transition",
           "Outlet": "To HCU MC2; rear circuit only"
         },
-        "note": "Rear sensor is optional in Delta instructions but included here for the user’s requested front and rear pressure measurement.",
+        "note": "Buy one Delta tee per master cylinder outlet. Summit OPS-UT10B-1 is a possible substitute pending sensor-seat verification.",
         "source": "https://www.deltaabs.com/products/m10-bubble-tee"
       },
       {
@@ -4402,7 +4406,7 @@ window.OIL_CHAINS = [
         "h": 115,
         "image": "delta-sensor.png",
         "specs": {
-          "Thread": "M10×1; confirm sealing seat in Delta tee",
+          "Thread": "M10×1; confirm sealing seat in the selected tee",
           "Circuit": "Front, before HCU MC1"
         },
         "note": "Included in Delta complete kit; do not purchase another sensor.",
@@ -4418,7 +4422,7 @@ window.OIL_CHAINS = [
         "h": 115,
         "image": "delta-sensor.png",
         "specs": {
-          "Thread": "M10×1; confirm sealing seat in Delta tee",
+          "Thread": "M10×1; confirm sealing seat in the selected tee",
           "Circuit": "Rear, before HCU MC2"
         },
         "note": "Included in Delta complete kit; do not purchase another sensor.",
@@ -4454,7 +4458,7 @@ window.OIL_CHAINS = [
           "Feed": "Individual HCU LF output",
           "WheelEnd": "M10×1 banjo inlet, verify on installed caliper",
           "Line": "Dedicated rigid line → fixed -3 AN transition → braided hose → banjo",
-          "ChassisTransition": "Pure Choice 2165 M10×1 bubble female to -3 AN male",
+          "ChassisTransition": "WIL-220-6890 · M10×1 bubble female to -3 AN male",
           "Hose inlet": "M10×1 banjo thread (OE GM 11569590, front/rear)"
         },
         "note": "GM C6 hose catalog confirms M10×1 banjo bolts front and rear; exact caliper/year and selected hose eye still need physical fit verification. https://www.gmpartsgiant.com/parts-list/2013-chevrolet-corvette/brakes/brake_hoses_pipes.html",
@@ -4473,7 +4477,7 @@ window.OIL_CHAINS = [
           "Feed": "Individual HCU RF output",
           "WheelEnd": "M10×1 banjo inlet, verify on installed caliper",
           "Line": "Dedicated rigid line → fixed -3 AN transition → braided hose → banjo",
-          "ChassisTransition": "Pure Choice 2165 M10×1 bubble female to -3 AN male",
+          "ChassisTransition": "WIL-220-6890 · M10×1 bubble female to -3 AN male",
           "Hose inlet": "M10×1 banjo thread (OE GM 11569590, front/rear)"
         },
         "note": "GM C6 hose catalog confirms M10×1 banjo bolts front and rear; exact caliper/year and selected hose eye still need physical fit verification. https://www.gmpartsgiant.com/parts-list/2013-chevrolet-corvette/brakes/brake_hoses_pipes.html",
@@ -4492,7 +4496,7 @@ window.OIL_CHAINS = [
           "Feed": "Individual HCU LR output",
           "WheelEnd": "M10×1 banjo inlet, verify on installed caliper",
           "Line": "Dedicated rigid line → fixed -3 AN transition → braided hose → banjo",
-          "ChassisTransition": "Pure Choice 2165 M10×1 bubble female to -3 AN male",
+          "ChassisTransition": "WIL-220-6890 · M10×1 bubble female to -3 AN male",
           "Hose inlet": "M10×1 banjo thread (OE GM 11569590, front/rear)"
         },
         "note": "GM C6 hose catalog confirms M10×1 banjo bolts front and rear; exact caliper/year and selected hose eye still need physical fit verification. https://www.gmpartsgiant.com/parts-list/2013-chevrolet-corvette/brakes/brake_hoses_pipes.html",
@@ -4511,7 +4515,7 @@ window.OIL_CHAINS = [
           "Feed": "Individual HCU RR output",
           "WheelEnd": "M10×1 banjo inlet, verify on installed caliper",
           "Line": "Dedicated rigid line → fixed -3 AN transition → braided hose → banjo",
-          "ChassisTransition": "Pure Choice 2165 M10×1 bubble female to -3 AN male",
+          "ChassisTransition": "WIL-220-6890 · M10×1 bubble female to -3 AN male",
           "Hose inlet": "M10×1 banjo thread (OE GM 11569590, front/rear)"
         },
         "note": "GM C6 hose catalog confirms M10×1 banjo bolts front and rear; exact caliper/year and selected hose eye still need physical fit verification. https://www.gmpartsgiant.com/parts-list/2013-chevrolet-corvette/brakes/brake_hoses_pipes.html",
@@ -4672,20 +4676,19 @@ window.OIL_CHAINS = [
       },
       {
         "id": "BCU",
-        "name": "Master AN union",
-        "sub": "Tilton 73-820 · -3 male/male",
+        "name": "Clutch hardline adapter",
+        "sub": "TIL-TE2089-188L",
         "x": 715,
         "y": 990,
         "w": 165,
         "h": 105,
-        "image": "til-73-820.jpg",
         "specs": {
           "Master end": "Male -3 AN flare",
-          "Hose end": "Male -3 AN flare",
-          "Purpose": "Exposes male -3 AN for female-swivel clutch hose"
+          "Tube end": "Female 3/8-24 SAE inverted flare"
         },
-        "note": "Summit TIL-73-820; use one at the chosen outlet. Retain proper plug in unused master outlet.",
-        "source": "https://www.summitracing.com/parts/til-73-820"
+        "note": "Fit to the selected pressure outlet. Retain the plug in the unused outlet.",
+        "source": "https://www.summitracing.com/parts/til-te2089-188l",
+        "kind": "adapter"
       },
       {
         "id": "BSA",
@@ -4744,38 +4747,37 @@ window.OIL_CHAINS = [
       {
         "id": "BLFTAB",
         "name": "LF chassis tab",
-        "sub": "2165 · bubble → -3 AN",
+        "sub": "Wilwood · bubble to -3 AN",
         "x": 1570,
         "y": 80,
         "w": 155,
         "h": 120,
-        "image": "purechoice-2165.jpg",
         "specs": {
           "Tube side": "Female M10×1 ISO bubble flare",
           "Hose side": "Male -3 AN flare",
           "Mount": "Weld-on tab and retaining clip",
-          "Kit": "Pure Choice Motorsports 2165; 2 transitions per kit"
+          "Chassis fitting": "WIL-220-6890"
         },
-        "note": "Two kits supply four wheel transitions; tab must be attached to fixed chassis structure. The tube nut and bubble flare are separate parts.",
-        "source": "https://www.purechoicemotorsports.com/products/inverted-flare-brake-line-bulkhead-fitting-tab-kits"
+        "note": "Use one WIL-220-6890, one AAF-ALL60030 weld tab and one WIL-300-15780 clip per wheel. Verify tab thickness and clip engagement at mock-up.",
+        "source": "https://www.summitracing.com/parts/wil-220-6890"
       },
       {
         "id": "BLFFLEX",
         "name": "LF braided flex",
-        "sub": "RUS-657222 · 20 in candidate",
+        "sub": "RUS-657062 · 24 in",
         "x": 1770,
         "y": 80,
         "w": 165,
         "h": 120,
-        "image": "rus-657222.jpg",
         "specs": {
           "Chassis end": "Female -3 AN swivel",
           "Caliper end": "10 mm banjo eye",
           "Construction": "Factory-crimped braided brake hose; DOT MVSS-106",
-          "Length": "20 in candidate; compare 18 in RUS-657042 at full motion"
+          "Length": "24 in finished"
         },
-        "note": "20 in is the baseline candidate; 18 in RUS-657042 is an alternative. Final length must be measured. Verify clocking, steering lock, bump/droop, abrasion, and strain relief.",
-        "source": "https://www.summitracing.com/parts/rus-657222"
+        "note": "Check clearance at bump, droop and steering lock.",
+        "source": "https://www.summitracing.com/parts/rus-657062",
+        "kind": "hose"
       },
       {
         "id": "BLFBANJO",
@@ -4798,38 +4800,37 @@ window.OIL_CHAINS = [
       {
         "id": "BRFTAB",
         "name": "RF chassis tab",
-        "sub": "2165 · bubble → -3 AN",
+        "sub": "Wilwood · bubble to -3 AN",
         "x": 1570,
         "y": 310,
         "w": 155,
         "h": 120,
-        "image": "purechoice-2165.jpg",
         "specs": {
           "Tube side": "Female M10×1 ISO bubble flare",
           "Hose side": "Male -3 AN flare",
           "Mount": "Weld-on tab and retaining clip",
-          "Kit": "Pure Choice Motorsports 2165; 2 transitions per kit"
+          "Chassis fitting": "WIL-220-6890"
         },
-        "note": "Two kits supply four wheel transitions; tab must be attached to fixed chassis structure. The tube nut and bubble flare are separate parts.",
-        "source": "https://www.purechoicemotorsports.com/products/inverted-flare-brake-line-bulkhead-fitting-tab-kits"
+        "note": "Use one WIL-220-6890, one AAF-ALL60030 weld tab and one WIL-300-15780 clip per wheel. Verify tab thickness and clip engagement at mock-up.",
+        "source": "https://www.summitracing.com/parts/wil-220-6890"
       },
       {
         "id": "BRFFLEX",
         "name": "RF braided flex",
-        "sub": "RUS-657222 · 20 in candidate",
+        "sub": "RUS-657062 · 24 in",
         "x": 1770,
         "y": 310,
         "w": 165,
         "h": 120,
-        "image": "rus-657222.jpg",
         "specs": {
           "Chassis end": "Female -3 AN swivel",
           "Caliper end": "10 mm banjo eye",
           "Construction": "Factory-crimped braided brake hose; DOT MVSS-106",
-          "Length": "20 in candidate; compare 18 in RUS-657042 at full motion"
+          "Length": "24 in finished"
         },
-        "note": "20 in is the baseline candidate; 18 in RUS-657042 is an alternative. Final length must be measured. Verify clocking, steering lock, bump/droop, abrasion, and strain relief.",
-        "source": "https://www.summitracing.com/parts/rus-657222"
+        "note": "Check clearance at bump, droop and steering lock.",
+        "source": "https://www.summitracing.com/parts/rus-657062",
+        "kind": "hose"
       },
       {
         "id": "BRFBANJO",
@@ -4852,25 +4853,24 @@ window.OIL_CHAINS = [
       {
         "id": "BLRTAB",
         "name": "LR chassis tab",
-        "sub": "2165 · bubble → -3 AN",
+        "sub": "Wilwood · bubble to -3 AN",
         "x": 1570,
         "y": 540,
         "w": 155,
         "h": 120,
-        "image": "purechoice-2165.jpg",
         "specs": {
           "Tube side": "Female M10×1 ISO bubble flare",
           "Hose side": "Male -3 AN flare",
           "Mount": "Weld-on tab and retaining clip",
-          "Kit": "Pure Choice Motorsports 2165; 2 transitions per kit"
+          "Chassis fitting": "WIL-220-6890"
         },
-        "note": "Two kits supply four wheel transitions; tab must be attached to fixed chassis structure. The tube nut and bubble flare are separate parts.",
-        "source": "https://www.purechoicemotorsports.com/products/inverted-flare-brake-line-bulkhead-fitting-tab-kits"
+        "note": "Use one WIL-220-6890, one AAF-ALL60030 weld tab and one WIL-300-15780 clip per wheel. Verify tab thickness and clip engagement at mock-up.",
+        "source": "https://www.summitracing.com/parts/wil-220-6890"
       },
       {
         "id": "BLRFLEX",
         "name": "LR braided flex",
-        "sub": "RUS-657222 · 20 in candidate",
+        "sub": "RUS-657222 · 20 in",
         "x": 1770,
         "y": 540,
         "w": 165,
@@ -4880,9 +4880,9 @@ window.OIL_CHAINS = [
           "Chassis end": "Female -3 AN swivel",
           "Caliper end": "10 mm banjo eye",
           "Construction": "Factory-crimped braided brake hose; DOT MVSS-106",
-          "Length": "20 in candidate; compare 18 in RUS-657042 at full motion"
+          "Length": "20 in finished"
         },
-        "note": "20 in is the baseline candidate; 18 in RUS-657042 is an alternative. Final length must be measured. Verify clocking, steering lock, bump/droop, abrasion, and strain relief.",
+        "note": "Check clearance at bump, droop and steering lock.",
         "source": "https://www.summitracing.com/parts/rus-657222"
       },
       {
@@ -4906,25 +4906,24 @@ window.OIL_CHAINS = [
       {
         "id": "BRRTAB",
         "name": "RR chassis tab",
-        "sub": "2165 · bubble → -3 AN",
+        "sub": "Wilwood · bubble to -3 AN",
         "x": 1570,
         "y": 770,
         "w": 155,
         "h": 120,
-        "image": "purechoice-2165.jpg",
         "specs": {
           "Tube side": "Female M10×1 ISO bubble flare",
           "Hose side": "Male -3 AN flare",
           "Mount": "Weld-on tab and retaining clip",
-          "Kit": "Pure Choice Motorsports 2165; 2 transitions per kit"
+          "Chassis fitting": "WIL-220-6890"
         },
-        "note": "Two kits supply four wheel transitions; tab must be attached to fixed chassis structure. The tube nut and bubble flare are separate parts.",
-        "source": "https://www.purechoicemotorsports.com/products/inverted-flare-brake-line-bulkhead-fitting-tab-kits"
+        "note": "Use one WIL-220-6890, one AAF-ALL60030 weld tab and one WIL-300-15780 clip per wheel. Verify tab thickness and clip engagement at mock-up.",
+        "source": "https://www.summitracing.com/parts/wil-220-6890"
       },
       {
         "id": "BRRFLEX",
         "name": "RR braided flex",
-        "sub": "RUS-657222 · 20 in candidate",
+        "sub": "RUS-657222 · 20 in",
         "x": 1770,
         "y": 770,
         "w": 165,
@@ -4934,9 +4933,9 @@ window.OIL_CHAINS = [
           "Chassis end": "Female -3 AN swivel",
           "Caliper end": "10 mm banjo eye",
           "Construction": "Factory-crimped braided brake hose; DOT MVSS-106",
-          "Length": "20 in candidate; compare 18 in RUS-657042 at full motion"
+          "Length": "20 in finished"
         },
-        "note": "20 in is the baseline candidate; 18 in RUS-657042 is an alternative. Final length must be measured. Verify clocking, steering lock, bump/droop, abrasion, and strain relief.",
+        "note": "Check clearance at bump, droop and steering lock.",
         "source": "https://www.summitracing.com/parts/rus-657222"
       },
       {
@@ -4988,7 +4987,7 @@ window.OIL_CHAINS = [
           245
         ],
         "ends": [
-          "Delta tee M10×1 bubble",
+          "Sensor tee M10×1 bubble",
           "Delta HCU MC1 M10×1 bubble"
         ],
         "detail": "3/16 in CuNi rigid brake tube with an M10×1 bubble-flare nut on each end. Support tube and allow Delta-specified vibration relief near HCU.",
@@ -5024,7 +5023,7 @@ window.OIL_CHAINS = [
           680
         ],
         "ends": [
-          "Delta tee M10×1 bubble",
+          "Sensor tee M10×1 bubble",
           "Delta HCU MC2 M10×1 bubble"
         ],
         "detail": "3/16 in CuNi rigid brake tube with an M10×1 bubble-flare nut on each end. Support tube and allow Delta-specified vibration relief near HCU.",
@@ -5042,7 +5041,7 @@ window.OIL_CHAINS = [
           175
         ],
         "ends": [
-          "Delta tee M10×1 sensor port",
+          "Sensor tee M10×1 sensor port",
           "Kit pressure sensor M10×1"
         ],
         "detail": "Sensor supplied in complete Delta kit; verify its sealing geometry with tee.",
@@ -5060,7 +5059,7 @@ window.OIL_CHAINS = [
           765
         ],
         "ends": [
-          "Delta tee M10×1 sensor port",
+          "Sensor tee M10×1 sensor port",
           "Kit pressure sensor M10×1"
         ],
         "detail": "Second kit sensor used for rear bias measurement.",
@@ -5081,7 +5080,7 @@ window.OIL_CHAINS = [
           "HCU LF M10×1 ISO bubble",
           "LF tab female M10×1 ISO bubble"
         ],
-        "detail": "Dedicated 3/16 in CuNi rigid line; M10×1 ISO bubble flare and tube nut at both ends. Ends at fixed 2165 chassis tab, then -3 AN flex. No wheel tee.",
+        "detail": "Dedicated 3/16 in CuNi rigid line; M10×1 ISO bubble flare and tube nut at both ends. Ends at fixed WIL-220-6890 chassis tab, then -3 AN flex. No wheel tee. Wheel flex: 24 in, RUS-657062.",
         "color": "#c65747",
         "short": "LF hard"
       },
@@ -5099,7 +5098,7 @@ window.OIL_CHAINS = [
           "HCU RF M10×1 ISO bubble",
           "RF tab female M10×1 ISO bubble"
         ],
-        "detail": "Dedicated 3/16 in CuNi rigid line; M10×1 ISO bubble flare and tube nut at both ends. Ends at fixed 2165 chassis tab, then -3 AN flex. No wheel tee.",
+        "detail": "Dedicated 3/16 in CuNi rigid line; M10×1 ISO bubble flare and tube nut at both ends. Ends at fixed WIL-220-6890 chassis tab, then -3 AN flex. No wheel tee. Wheel flex: 24 in, RUS-657062.",
         "color": "#c65747",
         "short": "RF hard"
       },
@@ -5117,7 +5116,7 @@ window.OIL_CHAINS = [
           "HCU LR M10×1 ISO bubble",
           "LR tab female M10×1 ISO bubble"
         ],
-        "detail": "Dedicated 3/16 in CuNi rigid line; M10×1 ISO bubble flare and tube nut at both ends. Ends at fixed 2165 chassis tab, then -3 AN flex. No wheel tee.",
+        "detail": "Dedicated 3/16 in CuNi rigid line; M10×1 ISO bubble flare and tube nut at both ends. Ends at fixed WIL-220-6890 chassis tab, then -3 AN flex. No wheel tee. Wheel flex: 20 in, RUS-657222.",
         "color": "#437bb0",
         "short": "LR hard"
       },
@@ -5135,7 +5134,7 @@ window.OIL_CHAINS = [
           "HCU RR M10×1 ISO bubble",
           "RR tab female M10×1 ISO bubble"
         ],
-        "detail": "Dedicated 3/16 in CuNi rigid line; M10×1 ISO bubble flare and tube nut at both ends. Ends at fixed 2165 chassis tab, then -3 AN flex. No wheel tee.",
+        "detail": "Dedicated 3/16 in CuNi rigid line; M10×1 ISO bubble flare and tube nut at both ends. Ends at fixed WIL-220-6890 chassis tab, then -3 AN flex. No wheel tee. Wheel flex: 20 in, RUS-657222.",
         "color": "#437bb0",
         "short": "RR hard"
       },
@@ -5150,10 +5149,10 @@ window.OIL_CHAINS = [
           248
         ],
         "ends": [
-          "Tilton 72-578 male -4 AN chamber outlet",
-          "PTFE hose female -4 AN → Tilton 76-015 male -4 AN"
+          "Reservoir male -4 AN → straight female -4 AN",
+          "90° female -4 AN → master inlet adapter"
         ],
-        "detail": "One dedicated -4 AN PTFE-lined braided hose with female -4 AN ends. Fragola 360018 is an 18 in example; measure and select each length after mounting. Gravity feed; no shared fluid.",
+        "detail": "10 in finished for all three feeds; straight at reservoir, 90° at master. FRA-410-1-2-10.",
         "color": "#c65747",
         "short": "-4 PTFE feed"
       },
@@ -5186,10 +5185,10 @@ window.OIL_CHAINS = [
           653
         ],
         "ends": [
-          "Tilton 72-578 male -4 AN chamber outlet",
-          "PTFE hose female -4 AN → Tilton 76-015 male -4 AN"
+          "Reservoir male -4 AN → straight female -4 AN",
+          "90° female -4 AN → master inlet adapter"
         ],
-        "detail": "One dedicated -4 AN PTFE-lined braided hose with female -4 AN ends. Fragola 360018 is an 18 in example; measure and select each length after mounting. Gravity feed; no shared fluid.",
+        "detail": "10 in finished for all three feeds; straight at reservoir, 90° at master. FRA-410-1-2-10.",
         "color": "#437bb0",
         "short": "-4 PTFE feed"
       },
@@ -5222,10 +5221,10 @@ window.OIL_CHAINS = [
           1033
         ],
         "ends": [
-          "Tilton 72-578 male -4 AN chamber outlet",
-          "PTFE hose female -4 AN → Tilton 76-015 male -4 AN"
+          "Reservoir male -4 AN → straight female -4 AN",
+          "90° female -4 AN → master inlet adapter"
         ],
-        "detail": "One dedicated -4 AN PTFE-lined braided hose with female -4 AN ends. Fragola 360018 is an 18 in example; measure and select each length after mounting. Gravity feed; no shared fluid.",
+        "detail": "10 in finished for all three feeds; straight at reservoir, 90° at master. FRA-410-1-2-10.",
         "color": "#6a759b",
         "short": "-4 PTFE feed"
       },
@@ -5249,7 +5248,7 @@ window.OIL_CHAINS = [
       },
       {
         "id": "BC01",
-        "name": "Clutch master → union",
+        "name": "Clutch master to hardline adapter",
         "from": "BCM",
         "to": "BCU",
         "path": "M660 1042 H715",
@@ -5259,15 +5258,15 @@ window.OIL_CHAINS = [
         ],
         "ends": [
           "Tilton 76-series female -3 AN outlet",
-          "Tilton 73-820 male -3 AN"
+          "TE2089-188L male -3 AN"
         ],
-        "detail": "One male/male -3 AN union at the selected Tilton master outlet; leave its unused outlet plugged.",
+        "detail": "Fit to the selected pressure outlet. Retain the plug in the unused outlet.",
         "color": "#6a759b",
-        "short": "-3 union"
+        "short": "-3 AN"
       },
       {
         "id": "BC02",
-        "name": "Clutch pressure hose",
+        "name": "Clutch hardline and slave flex hose",
         "from": "BCU",
         "to": "BSA",
         "path": "M880 1042 H1040",
@@ -5276,12 +5275,12 @@ window.OIL_CHAINS = [
           1027
         ],
         "ends": [
-          "Female -3 AN swivel hose end",
-          "Female -3 AN swivel hose end"
+          "3/16 in double-flared tube in the master adapter",
+          "Female -3 AN hose end at the slave adapter"
         ],
-        "detail": "Brake-fluid-compatible -3 hydraulic hose with female -3 AN ends, route/length to measure. Do not use a generic fuel/oil AN hose for brake fluid.",
+        "detail": "Master outlet adapter → 3/16 in double-flared hardline → fixed SUM-770945-KIT chassis transition → short -3 AN braided flex hose → FRA-650302 at the Wilwood slave. 12 in EAR-63010112ERL flex confirmed; measure the rigid tube separately.",
         "color": "#6a759b",
-        "short": "-3 hose"
+        "short": "Tube + flex"
       },
       {
         "id": "BC03",
@@ -5312,10 +5311,10 @@ window.OIL_CHAINS = [
           128
         ],
         "ends": [
-          "Pure Choice 2165 male -3 AN",
-          "Russell RUS-657222 female -3 AN"
+          "WIL-220-6890 male -3 AN",
+          "Russell RUS-657062 female -3 AN"
         ],
-        "detail": "Direct 37-degree AN flare connection. 20 in hose is a candidate; compare 18 in RUS-657042 after measuring each corner.",
+        "detail": "Direct 37-degree AN flare connection.",
         "color": "#c65747",
         "short": "-3 AN"
       },
@@ -5330,7 +5329,7 @@ window.OIL_CHAINS = [
           128
         ],
         "ends": [
-          "Russell 657222 10 mm banjo eye",
+          "Russell 657062 10 mm banjo eye",
           "M10×1 banjo bolt with two new 10 mm crush washers"
         ],
         "detail": "The banjo eye is integral to factory-crimped hose. Verify bolt grip length for actual eye thickness.",
@@ -5366,10 +5365,10 @@ window.OIL_CHAINS = [
           358
         ],
         "ends": [
-          "Pure Choice 2165 male -3 AN",
-          "Russell RUS-657222 female -3 AN"
+          "WIL-220-6890 male -3 AN",
+          "Russell RUS-657062 female -3 AN"
         ],
-        "detail": "Direct 37-degree AN flare connection. 20 in hose is a candidate; compare 18 in RUS-657042 after measuring each corner.",
+        "detail": "Direct 37-degree AN flare connection.",
         "color": "#c65747",
         "short": "-3 AN"
       },
@@ -5384,7 +5383,7 @@ window.OIL_CHAINS = [
           358
         ],
         "ends": [
-          "Russell 657222 10 mm banjo eye",
+          "Russell 657062 10 mm banjo eye",
           "M10×1 banjo bolt with two new 10 mm crush washers"
         ],
         "detail": "The banjo eye is integral to factory-crimped hose. Verify bolt grip length for actual eye thickness.",
@@ -5420,10 +5419,10 @@ window.OIL_CHAINS = [
           588
         ],
         "ends": [
-          "Pure Choice 2165 male -3 AN",
+          "WIL-220-6890 male -3 AN",
           "Russell RUS-657222 female -3 AN"
         ],
-        "detail": "Direct 37-degree AN flare connection. 20 in hose is a candidate; compare 18 in RUS-657042 after measuring each corner.",
+        "detail": "Direct 37-degree AN flare connection.",
         "color": "#437bb0",
         "short": "-3 AN"
       },
@@ -5474,10 +5473,10 @@ window.OIL_CHAINS = [
           818
         ],
         "ends": [
-          "Pure Choice 2165 male -3 AN",
+          "WIL-220-6890 male -3 AN",
           "Russell RUS-657222 female -3 AN"
         ],
-        "detail": "Direct 37-degree AN flare connection. 20 in hose is a candidate; compare 18 in RUS-657042 after measuring each corner.",
+        "detail": "Direct 37-degree AN flare connection.",
         "color": "#437bb0",
         "short": "-3 AN"
       },
@@ -5529,9 +5528,9 @@ window.OIL_CHAINS = [
         ],
         "ends": [
           "3/16 in rigid CuNi line; M10×1 bubble tube nut",
-          "Delta tee female M10×1 ISO bubble"
+          "Sensor tee female M10×1 ISO bubble"
         ],
-        "detail": "3/16 in CuNi rigid line with M10×1 ISO bubble flare at both ends; one tube nut enters the master adapter, the other enters the supported Delta sensor tee.",
+        "detail": "3/16 in CuNi rigid line with M10×1 ISO bubble flare at both ends; one tube nut enters the master adapter, the other enters the supported sensor tee.",
         "color": "#c65747",
         "short": "M10 bubble"
       },
@@ -5547,9 +5546,9 @@ window.OIL_CHAINS = [
         ],
         "ends": [
           "3/16 in rigid CuNi line; M10×1 bubble tube nut",
-          "Delta tee female M10×1 ISO bubble"
+          "Sensor tee female M10×1 ISO bubble"
         ],
-        "detail": "3/16 in CuNi rigid line with M10×1 ISO bubble flare at both ends; one tube nut enters the master adapter, the other enters the supported Delta sensor tee.",
+        "detail": "3/16 in CuNi rigid line with M10×1 ISO bubble flare at both ends; one tube nut enters the master adapter, the other enters the supported sensor tee.",
         "color": "#437bb0",
         "short": "M10 bubble"
       }
@@ -5578,17 +5577,17 @@ window.OIL_CHAINS = [
         "Delta ABS complete kit",
         1,
         "HCU, two pressure sensors, four wheel sensors, loom and controls",
-        "Specified",
-        "Planned / user specified",
+        "Owned",
+        "Owner confirmed.",
         "BHCU"
       ],
       [
         "B-P04",
-        "Delta M10×1 ISO bubble tee",
+        "Delta ABS brake pressure sensor tee",
         2,
-        "Three-port brake junction; one per master output line",
-        "Proposed",
-        "Purchase separately; kit contents do not list tees",
+        "M10×1.0 DIN/ISO bubble flare",
+        "Buy",
+        "Delta ABS USA. One front and one rear. Summit OPS-UT10B-1 is a possible substitute pending sensor-seat verification.",
         "BFT"
       ],
       [
@@ -5631,9 +5630,9 @@ window.OIL_CHAINS = [
         "B-P09",
         "Wheel flexible hoses",
         4,
-        "Russell RUS-657222 20 in or RUS-657042 18 in: -3 AN female × 10 mm banjo; final lengths by corner TBD",
-        "Length candidate",
-        "Summit RUS-657222 20 in baseline or RUS-657042 18 in; select quantity by corner after full-motion fit check",
+        "Front: 2 × 24 in RUS-657062; rear: 2 × 20 in RUS-657222",
+        "Selected",
+        "Straight female -3 AN × 10 mm banjo.",
         "BLFFLEX"
       ],
       [
@@ -5658,9 +5657,9 @@ window.OIL_CHAINS = [
         "B-P12",
         "Reservoir-to-master feed hoses",
         3,
-        "Three separate PTFE-lined braided hoses; female -4 AN at both ends; lengths to measure",
-        "Length TBD",
-        "Summit Fragola FRA-360018 18 in is example only; select length per circuit",
+        "Straight female -4 AN at reservoir, 90° female -4 AN at master · FRA-410-1-2-10",
+        "Selected",
+        "10 in finished for all three feeds; straight at reservoir, 90° at master.",
         "BFF1"
       ],
       [
@@ -5692,11 +5691,11 @@ window.OIL_CHAINS = [
       ],
       [
         "B-P16",
-        "Tilton 73-820 master outlet union",
+        "Tilton TE2089-188L clutch outlet adapter",
         1,
-        "Male -3 AN / male -3 AN; clutch outlet",
-        "Candidate",
-        "Summit TIL-73-820",
+        "Male -3 AN × female 3/8-24 inverted flare · TIL-TE2089-188L",
+        "Selected",
+        "Fit to the selected pressure outlet. Retain the plug in the unused outlet.",
         "BCU"
       ],
       [
@@ -5710,18 +5709,18 @@ window.OIL_CHAINS = [
       ],
       [
         "B-P18",
-        "Clutch pressure hose assembly",
+        "Chassis-to-slave flex hose",
         1,
-        "Brake-fluid-compatible -3 line; female -3 AN ends; length TBD",
-        "TBD",
-        "Measure after mounting",
+        "Female -3 AN swivel at both ends · EAR-63010112ERL",
+        "Selected",
+        "12 in finished, straight/straight; check clearance through full travel.",
         "BC02"
       ],
       [
         "B-P19",
         "3/16 in CuNi brake tubing",
         "TBD",
-        "25 ft coil; cut for 8 rigid assemblies; total footage TBD",
+        "25 ft coil for eight rigid brake lines and the clutch hardline (SUM-220216-25X)",
         "Footage TBD",
         "Summit SUM-220216-25X, 25 ft per coil; total footage to measure",
         "B07"
@@ -5737,11 +5736,11 @@ window.OIL_CHAINS = [
       ],
       [
         "B-P21",
-        "M10 bubble / -3 AN fixed chassis tab kits",
-        2,
-        "Pure Choice 2165; two bulkhead fittings + tabs + clips per kit",
+        "Wheel chassis transition fittings",
+        4,
+        "M10×1 bubble female to -3 AN male · WIL-220-6890",
         "Candidate",
-        "Direct vendor; 2 kits cover 4 wheel circuits",
+        "Use one WIL-220-6890, one AAF-ALL60030 weld tab and one WIL-300-15780 clip per wheel. Verify tab thickness and clip engagement at mock-up.",
         "BLFTAB"
       ],
       [
@@ -5784,10 +5783,55 @@ window.OIL_CHAINS = [
         "B-P26",
         "Sensor tee chassis supports",
         2,
-        "Rigid mount or bracket for each Delta M10 bubble sensor tee",
+        "Fabricate supports to fit the selected sensor tees",
         "Fabrication TBD",
         "Design supports after physical routing; no SKU selected",
         "BFCHAIN"
+      ],
+      [
+        "B-P27",
+        "Clutch pressure hardline",
+        1,
+        "3/16 in OD with SAE 45° double flares · SUM-220216-25X",
+        "Length TBD",
+        "Cut from the shared 25 ft coil. Measure the clutch run with the eight brake hardlines.",
+        "BC02"
+      ],
+      [
+        "B-P28",
+        "Clutch hardline tube nuts",
+        2,
+        "3/8-24 male SAE inverted flare for 3/16 in tube · SUM-220511",
+        "Specified",
+        "One per end.",
+        "BC02"
+      ],
+      [
+        "B-P29",
+        "Clutch chassis transition",
+        1,
+        "Female 3/8-24 inverted flare × male -3 AN · SUM-770945-KIT",
+        "Selected",
+        "Use one 3/8-24 inverted-flare to -3 AN adapter, tab and clip. One bolt-on kit supplies two transitions. Check mounting space.",
+        "BC02"
+      ],
+      [
+        "B-P30",
+        "Wheel chassis tabs",
+        4,
+        "5/8 in hole, weld-on · AAF-ALL60030",
+        "Verify fit",
+        "Four tabs per pack. Check fit with the Wilwood frame fitting.",
+        "BLFTAB"
+      ],
+      [
+        "B-P31",
+        "Wheel chassis fitting clips",
+        4,
+        "Wilwood bowed retaining clip · WIL-300-15780",
+        "Specified",
+        "Sold individually. One clip per wheel.",
+        "BLFTAB"
       ]
     ],
     "issues": [
@@ -5803,7 +5847,7 @@ window.OIL_CHAINS = [
       ],
       [
         "Reservoirs and inlets",
-        "Tilton 72-578 selected: one low-profile body with isolated rear (left, 4.0 oz), front (center, 6.1 oz), and clutch (right, 2.0 oz) chambers when viewed from the logo side. Each has a male -4 AN outlet. Use three separate -4 AN female-ended PTFE feed hoses to 76-015 master inlet adapters while 76-series masters are retained. Mount level and above masters/calipers, away from heat; measure each hose. Revisit front/rear inlet adapters if ABS-compatible masters replace the 76-series.",
+        "Tilton 72-578 selected: one low-profile body with isolated rear (left, 4.0 oz), front (center, 6.1 oz), and clutch (right, 2.0 oz) chambers when viewed from the logo side. Each has a male -4 AN outlet. Use three separate -4 AN female-ended PTFE feed hoses to 76-015 master inlet adapters while 76-series masters are retained. Mount level and above masters/calipers, away from heat; each feed has a 10 in finished length. Revisit front/rear inlet adapters if ABS-compatible masters replace the 76-series.",
         "BFRV"
       ],
       [
@@ -5818,17 +5862,17 @@ window.OIL_CHAINS = [
       ],
       [
         "Clutch circuit definition",
-        "Wilwood 260-1333 is a 7/8 in-bore pull-type slave with 1.38 in stroke. Wilwood recommends a 0.750 in master. Confirm the installed clutch master bore and pedal/release travel. Verify the slave inlet port used: 3/8-24 female inverted flare or 1/8-27 NPT. Summit FRA-650302 suits the IF port; hose length and routing remain to measure.",
+        "Wilwood 260-1333 uses a short -3 AN flex hose from the chassis tab and 3/16 in hardline back to the master. Confirm the 3/8-24 inverted-flare inlet fitting is installed before using FRA-650302. Measure the rigid tube, check full travel and verify the installed master bore (Wilwood recommends 0.750 in).",
         "BCO"
       ],
       [
         "Brake outlet transition",
-        "Proposed FRA-650205 male AN-3 37° to female M10×1 ISO bubble adapter at each master, followed by 3/16 in CuNi rigid line with ISO bubble flares at both ends into the supported Delta tee. Finalize only after ABS-compatible master decision and physical clearance check.",
+        "Proposed FRA-650205 male AN-3 37° to female M10×1 ISO bubble adapter at each master, followed by 3/16 in CuNi rigid line with ISO bubble flares at both ends into the supported sensor tee. Finalize only after ABS-compatible master decision and physical clearance check.",
         "BFCHAIN"
       ],
       [
         "Wheel hose length and banjo hardware",
-        "GM OE bolt 11569590 confirms M10×1 banjo threads at front and rear C6 calipers. Measure each custom hose at full bump, droop and steering lock. RUS-657222 (20 in) and RUS-657042 (18 in) are length candidates; select per corner. Verify banjo-eye thickness, caliper seat, bolt grip/engagement and washer fit before buying or installing RUS-R40506.",
+        "GM OE bolt 11569590 confirms M10×1 banjo threads at front and rear C6 calipers. Measure each custom hose at full bump, droop and steering lock. Use RUS-657062 (24 in) front and RUS-657222 (20 in) rear. Verify banjo-eye thickness, caliper seat, bolt grip/engagement and washer fit before buying or installing RUS-R40506.",
         "BLFFLEX"
       ],
       [
@@ -5931,6 +5975,7 @@ function fittingDrawing(kind){
  else if(kind==='port')shape='<path d="M18 23 H46 V75 H18Z" fill="#8095a3"/><path d="M46 33 H119 L134 41 V55 L119 63 H46Z" fill="#b9c8d1"/><path d="M78 34 L87 61 M88 34 L97 61 M98 34 L107 61 M108 34 L117 61"/>';
  else if(kind==='hosebarb')shape='<path d="M20 36 H42 V29 L53 36 H70 V29 L81 36 H98 V29 L109 36 H134 V61 H109 L98 68 V61 H81 L70 68 V61 H53 L42 68 V61 H20Z" fill="#b8c7d0"/>';
  else if(kind==='orb'||kind==='barb')shape='<path d="M18 33 H50 V61 H18Z" fill="#bec8ce"/><path d="M20 35 L28 59 M28 35 L36 59 M36 35 L44 59"/><rect x="42" y="29" width="6" height="36" rx="3" fill="#20282e"/>'+hex+(kind==='barb'?'<path d="M97 33 H103 L108 28 V33 H119 L124 28 V33 H135 V61 H124 V66 L119 61 H108 V66 L103 61 H97Z" fill="#aebdc6"/>':'<path d="M97 33 H124 L137 40 V54 L124 61 H97Z" fill="#b8c5cd"/><path d="M105 34 L112 60 M113 34 L120 60 M121 35 L128 58"/>');
+ else if(kind==='hoseEnd45')shape='<path d="M21 75 L55 41 Q63 33 75 33 H128 V50 H78 Q73 50 69 54 L34 89Z" fill="#6c8291"/><path d="M15 71 L28 58 L50 80 L37 93Z M121 26 H142 V57 H121Z" fill="#b7c4ce"/>';
  else if(kind==='low90')shape='<path d="M30 74 V40 Q30 24 47 24 H124 V47 H63 Q55 47 55 55 V74Z" fill="#6c8291"/><path d="M25 75 H60 V90 H25Z M124 20 H142 V50 H124Z" fill="#b7c4ce"/><path d="M29 78 H57 M29 83 H57 M127 24 V46 M133 24 V46"/>';
  else if(kind==='hose'||kind==='orange'||kind==='elbow')shape=kind==='elbow'?'<path d="M25 77 V47 Q25 25 50 25 H127" fill="none" stroke="#32759d" stroke-width="25"/>':`<path d="M15 50 C50 10 100 85 142 43" fill="none" stroke="${kind==='orange'?'#e08a3e':'#364b59'}" stroke-width="23"/>`;
  else if(kind==='tube'||kind==='neck')shape='<rect x="22" y="32" width="105" height="32" fill="#c7d1d6"/><ellipse cx="125" cy="48" rx="12" ry="23" fill="#8497a4"/><ellipse cx="125" cy="48" rx="7" ry="16" fill="#283e4c"/><path d="M25 36 H110" stroke="#f3f8fa" stroke-width="4"/>';
@@ -5948,7 +5993,7 @@ function renderMapFittings(){
  const wrap=(text,width=18)=>{const words=text.split(' '),lines=[''];for(const w of words){if((lines.at(-1)+' '+w).trim().length>width)lines.push(w);else lines[lines.length-1]=(lines.at(-1)+' '+w).trim();}return lines;};
  let svg='<text x="40" y="50" class="map-title">COOLING / COMPONENTS + FITTINGS</text><text x="40" y="82" class="map-note">Click a product photo to open its website in a new tab. Candidate photos are labeled; unspecified components retain illustrations.</text><text x="40" y="1348" class="map-note">OTHER SEALING INTERFACES — separate items, not connected in series</text>';
  for(const c of FITTING_CHAINS){for(const [i,x,y]of placements[c[0]]||[]){const p=c[2][i],labels=wrap(p[2]+(p[4]?.sku?' / '+p[4].sku:''));svg+=`<g class="map-fitting" data-fitting="${c[0]}:${i}" tabindex="0" role="button" aria-label="${esc(p[1]+' '+p[2])}"><title>${esc(p[1]+' — '+p[2]+' — '+p[3])}</title><rect x="${x-57}" y="${y-38}" width="114" height="76" rx="9" fill="#fff" stroke="#d7e2e7"/>${fittingPhoto(p).replace('<svg viewBox=',`<svg x="${x-49}" y="${y-32}" width="98" height="64" viewBox=`)}${p[4]?.photoStatus?`<text x="${x}" y="${y-46}" text-anchor="middle" class="map-fitting-size">${esc(p[4].photoStatus)}</text>`:''}<text x="${x}" y="${y+58}" text-anchor="middle" class="map-fitting-name">${wrap(p[1],18).map((t,j)=>`<tspan x="${x}" dy="${j?17:0}">${esc(t)}</tspan>`).join('')}</text><text x="${x}" y="${y+99}" text-anchor="middle" class="map-fitting-size">${labels.map((t,j)=>`<tspan x="${x}" dy="${j?19:0}">${esc(t)}</tspan>`).join('')}</text></g>`;}}
- const tags=[['Pump: male -16 AN',2110,716],['Heater return: male -6 AN',2110,695],['Female -16 ORB',2110,1095],['ACE 26065 · female -16 ORB at both ends',900,886],['ACE 26065 · female -16 ORB at both ends',900,1120],['Necks: ~1.5 in / verify',40,1194],['Bottom + welded side: male -8 AN (catalog)',1110,410]];
+ const tags=[['Pump: installed 90° hose end',2110,716],['Heater return: male -6 AN',2110,695],['Female -16 ORB',2110,1095],['ACE 26065 · female -16 ORB at both ends',900,886],['ACE 26065 · female -16 ORB at both ends',900,1120],['Necks: ~1.5 in / verify',40,1194],['Bottom + welded side: male -8 AN (catalog)',1110,410]];
  svg+=tags.map(([t,x,y])=>`<text x="${x}" y="${y}" class="map-port-label">${esc(t)}</text>`).join('');
  $('#diagram').insertAdjacentHTML('beforeend',svg);
 }
