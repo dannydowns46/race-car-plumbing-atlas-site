@@ -1,0 +1,14 @@
+# Race Car Plumbing Atlas
+
+[Open the live schematic](https://dannydowns46.github.io/race-car-plumbing-atlas-site/)
+
+## Continue work from home
+
+Read **[Home Codex handoff and purchase audit](docs/HOME_CODEX_HANDOFF.md)** first. It records the November 17, 2026 reconciliation of the fitting list against purchase records, missing parts, conditional selections, ownership evidence, and the newer fuel-tank vent circuits.
+
+- [Printable whole-car fitting checklist](docs/whole-car-fitting-installation-checklist.pdf)
+- [Summit order quantities](docs/summit-order-8143075.csv)
+
+The schematic is `index.html`, a standalone site with embedded data and product images. GitHub Pages publishes `main`. Fetch the latest remote changes before editing; two computers/agents contribute to this repository.
+
+The schematic describes connections, not physical routing or installation approval. A selected SKU is not evidence of purchase. Use the handoff audit for purchase status and preserve unresolved fit checks until supported by evidence.

@@ -15,7 +15,7 @@
 #diagram{overflow:hidden}.detail-atlas .network-layer{display:none}body:not(.detail-atlas) .atlas-layer{display:none}.network-flow{stroke-width:7}
 </style></head>
 <body><header><div class="brand"><span class="brand-icon">↔</span><div><b>RACE CAR / SYSTEM ATLAS</b><small>Plumbing & connection register</small></div></div><div class="header-right"><span class="draft">WORKING DESIGN</span><button id="layout-toggle" class="secondary" type="button" aria-pressed="true">Show header details</button><button id="export" class="secondary">Export parts CSV ↓</button></div></header>
-<main><aside class="rail"><div class="eyebrow">SYSTEMS</div><nav id="systems" aria-label="Plumbing systems"></nav><div class="rail-note"><b>One connection at a time.</b><p>Select a component or line to see its ports, hose ends and open decisions.</p><p>Layout is schematic, not a physical routing or engineering approval.</p></div><div class="rail-foot">REV 05 <span>13 NOV 2026</span></div></aside>
+<main><aside class="rail"><div class="eyebrow">SYSTEMS</div><nav id="systems" aria-label="Plumbing systems"></nav><div class="rail-note"><b>One connection at a time.</b><p>Select a component or line to see its ports, hose ends and open decisions.</p><p>Layout is schematic, not a physical routing or engineering approval.</p><p><a href="https://github.com/dannydowns46/race-car-plumbing-atlas-site/blob/main/docs/HOME_CODEX_HANDOFF.md">Purchase audit / home handoff</a><br><a href="docs/whole-car-fitting-installation-checklist.pdf">Print fitting checklist</a></p></div><div class="rail-foot">REV 05 <span>13 NOV 2026</span></div></aside>
 <section class="workspace"><div class="heading"><div><div class="eyebrow" id="system-kicker">01 / THERMAL MANAGEMENT</div><h1 id="title">Cooling system</h1><p id="subtitle"></p></div><div class="metric"><b id="component-count"></b><span>components</span></div></div>
 <div class="tabs"><div role="tablist" aria-label="View"><button role="tab" data-view="schematic" aria-selected="true">Schematic</button><button role="tab" data-view="parts" aria-selected="false">Parts register <span id="parts-count"></span></button><button role="tab" data-view="issues" aria-selected="false">Open decisions <span id="issues-count"></span></button></div><label class="search"><span>⌕</span><input id="search" type="search" placeholder="Find a component or connection…" aria-label="Find a component or connection"></label></div>
 <div id="schematic-view"><div class="canvas-header"><div class="legend"><span style="--dot:#cd5b43">Hot coolant</span><span style="--dot:#317bb6">Cooled return</span><span style="--dot:#8a6ab6">Steam vent</span><span style="--dot:#31957d">Tank return</span><span style="--dot:#df862e">Overflow</span></div><div class="zoom"><button id="zoom-out" aria-label="Zoom out">−</button><button id="fit">Fit</button><button id="zoom-in" aria-label="Zoom in">+</button></div></div><div id="canvas" class="canvas"><svg id="diagram" role="group" aria-label="Interactive plumbing schematic" viewBox="0 0 1340 900"></svg></div><div class="canvas-footer"><span>Choose Show circuit for every fitting · Click a card for its product page · Drag to pan · Scroll to zoom</span><span>AN flare ≠ ORB seal</span></div><div id="circuit-list" class="circuit-list" aria-label="Select connection"></div></div>
@@ -1358,10 +1358,11 @@ window.FUEL_CHAINS = [
         "sensor",
         "Haltech fuel pressure sensor",
         "1/8 in NPT male · 0–150 psi",
-        "User-selected; mount to chassis. Includes 3-pin Delphi connector. Wiring project: A ground, B 5V, C signal to R3 AVI6/C15.",
+        "Purchased from Haltech, order 11276315; packing notice SO1006819971 confirms HT-010910 quantity 1. Mount to chassis. Wiring: A ground, B 5V, C signal to R3 AVI6/C15.",
         {
           "brand": "Haltech",
           "sku": "HTH-HT-010910",
+          "status": "Purchased",
           "source": "https://www.summitracing.com/parts/hth-ht-010910",
           "image": "fuel-hth-ht-010910.jpg",
           "photoStatus": ""
@@ -3711,8 +3712,8 @@ window.OIL_CHAINS = [
         "Haltech fuel pressure sensor",
         1,
         "1/8 in NPT male · 0–150 psi; HTH-HT-010910",
-        "Proposed",
-        "User-selected; mount to chassis. Includes 3-pin Delphi connector. Wiring project: A ground, B 5V, C signal to R3 AVI6/C15.",
+        "Purchased",
+        "Purchased from Haltech, order 11276315; packing notice SO1006819971 confirms HT-010910 quantity 1. Mount to chassis. Wiring: A ground, B 5V, C signal to R3 AVI6/C15.",
         "F08"
       ],
       [
