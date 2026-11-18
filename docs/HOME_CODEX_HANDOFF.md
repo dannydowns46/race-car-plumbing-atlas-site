@@ -34,9 +34,9 @@ Owner provided an order screenshot showing **Ready to Ship**. The order number a
 | FRA-650205 | 2 | Brake-master hardline adapters; final mating outlet and allocation require verification |
 | FRA-650302 | 1 | Clutch slave adapter; verify actual port and seat |
 | SUM-220167B | 1 | F06 overflow-receiving hanger return adapter; verify bare port |
-| FRA-229016-BL | 1 | Additional -16 90-degree hose end; allocation unconfirmed. Previous order contains three; total ordered four |
+| FRA-229016-BL | 1 | Owner confirmed November 18: supplemental -16 90-degree hose end allocated to OIL5-4, oil strainer inlet. Four total ordered; current schematic uses three. |
 
-The five visible lines total $114.05 before any tax or shipping. FRA-229016-BL cumulative ordered quantity is four (three in order 8143075, plus this one). Do not assign the additional end to a hose without owner confirmation.
+The five visible lines total $114.05 before any tax or shipping. FRA-229016-BL cumulative ordered quantity is four (three in order 8143075, plus this one). The supplemental fitting is allocated to the oil strainer inlet (OIL5-4), confirmed November 18. This location already showed a 90-degree end. The schematic has three installation positions for this SKU, leaving one of the four ordered fittings without an installation allocation.
 
 FRA-650205 is purchased, but the earlier assertion of direct fit at the master outlet needs verification of the actual mating interface. Preserve this fit check independently of purchasing status.
 
