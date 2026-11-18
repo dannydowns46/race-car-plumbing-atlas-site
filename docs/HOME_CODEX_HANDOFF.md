@@ -24,18 +24,30 @@ Purchase and receipt evidence confirms what was ordered; it does not establish t
 
 No purchase evidence was found for the outstanding items below in the checked Summit order or the targeted Gmail search. Do not interpret absence from these records as proof the owner cannot already have a part.
 
+## Supplemental Summit purchase confirmed November 17
+
+Owner provided an order screenshot showing **Ready to Ship**. The order number and placement date are not visible. These are ordered quantities, with delivery unconfirmed. See [supplemental order CSV](summit-supplemental-order-2026-11-17.csv).
+
+| SKU | Qty on new screenshot | Allocation / open fit check |
+| --- | ---: | --- |
+| TIL-76-015 | 3 | Reservoir inlet adapters; final brake-master compatibility still requires confirmation |
+| FRA-650205 | 2 | Brake-master hardline adapters; final mating outlet and allocation require verification |
+| FRA-650302 | 1 | Clutch slave adapter; verify actual port and seat |
+| SUM-220167B | 1 | F06 overflow-receiving hanger return adapter; verify bare port |
+| FRA-229016-BL | 1 | Additional -16 90-degree hose end; allocation unconfirmed. Previous order contains three; total ordered four |
+
+The five visible lines total $114.05 before any tax or shipping. FRA-229016-BL cumulative ordered quantity is four (three in order 8143075, plus this one). Do not assign the additional end to a hose without owner confirmation.
+
+FRA-650205 is purchased, but the earlier assertion of direct fit at the master outlet needs verification of the actual mating interface. Preserve this fit check independently of purchasing status.
+
 ## Outstanding fittings
 
 Quantities are installation requirements, not an instruction to buy every candidate immediately.
 
 | Qty | Item / SKU | Installation location | Remaining action |
 | ---: | --- | --- | --- |
-| Up to 3 | [TIL-76-015](https://www.summitracing.com/parts/til-76-015), 7/16-20 male O-ring to male -4 AN | BFF1 / BRF1 / BCF1, reservoir hose at each master | Not ordered. Inspect existing fittings. Front/rear inlet fitting choice depends on final ABS-compatible masters. One is allocated to retained clutch master. |
-| 2 | [Delta M10x1 DIN/ISO bubble tees](https://www.deltaabs.com/products/m10-bubble-tee) | B01/B03 pressure sensor branches before HCU | No purchase found. Sensors are included in the owned Delta kit; tees are separate. Support the tees on the chassis. OPS-UT10B-1 was only an unverified alternative, not an ordered item. |
-| 2 | [FRA-650205](https://www.summitracing.com/parts/fra-650205), male -3 AN to female M10x1 bubble | Front/rear brake-master pressure outlets | Not ordered. Candidate pending final master outlet/clearance. |
-| 1 | [FRA-650302](https://www.summitracing.com/parts/fra-650302), male -3 AN to male 3/8-24 inverted flare | BC02 Wilwood clutch slave inlet | Not ordered. Confirm actual slave inlet/installed seat first; do not substitute based on thread diameter alone. |
+| 2 | [Delta M10x1 DIN/ISO bubble tees](https://www.deltaabs.com/products/m10-bubble-tee) | B01/B03 pressure sensor branches before HCU | No purchase found. Sensors are included in the owned Delta kit; tees are separate. Support the tees on the chassis. Owner explicitly retained the Delta tees on November 17. OPS-UT10B-1 is not selected. |
 | Up to 4 | [RUS-R40506](https://www.summitracing.com/parts/rus-r40506), candidate M10x1 banjo bolts | B07-B10, four C6 Z06 calipers | Not ordered. Inspect existing bolts; candidate grip/engagement remains unverified with new hose eyes and washers. |
-| 1 | [SUM-220167B](https://www.summitracing.com/parts/sum-220167b), male -8 ORB to male -6 AN | F06 overflow-receiving hanger RETURN | Not ordered. Confirm bare hanger port and whether a supplied adapter already covers this. |
 | 1 if needed | 1/8 NPT male plug; [SUM-921015](https://www.summitracing.com/parts/sum-921015) was the listed eight-plug kit | OIL7 filter-mount probe/temperature port | Kit not ordered. Only needed if port is open and unused; verify whether a temperature sensor or existing plug occupies it. Owner's 3/8 NPT Mallory plugs are a different size. |
 
 ### Conditional additional pieces
@@ -96,7 +108,7 @@ The owner's annotated fitting and hose-length worksheets were already incorporat
 
 ## How to continue
 
-- Start with the outstanding table and confirm fittings physically on hand, particularly the master inlets, slave port, filter adapters, hanger RETURN adapter and banjo bolts.
+- Use the supplemental purchase table for newly ordered master inlets, FRA-650205 adapters, slave adapter and hanger RETURN adapter. Check delivery and physical fit separately. Continue with remaining outstanding items.
 - Resolve the ABS master decision before completing related purchases/fabrication.
 - Verify purchase/receipt of the newly added vent parts with the owner or purchase records.
 - Update chain metadata, parts rows and issue text together when facts change. Legacy `Buy` / `Proposed` entries in `index.html` are selection statuses, not a synchronized purchasing ledger; reconcile against this audit/CSV.

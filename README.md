@@ -8,6 +8,7 @@ Read **[Home Codex handoff and purchase audit](docs/HOME_CODEX_HANDOFF.md)** fir
 
 - [Printable whole-car fitting checklist](docs/whole-car-fitting-installation-checklist.pdf)
 - [Summit order quantities](docs/summit-order-8143075.csv)
+- [Supplemental Summit purchase confirmed November 17](docs/summit-supplemental-order-2026-11-17.csv)
 
 The schematic is `index.html`, a standalone site with embedded data and product images. GitHub Pages publishes `main`. Fetch the latest remote changes before editing; two computers/agents contribute to this repository.
 
