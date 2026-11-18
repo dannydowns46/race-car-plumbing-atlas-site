@@ -4,9 +4,10 @@
 
 ## Continue work from home
 
-Read **[Home Codex handoff and purchase audit](docs/HOME_CODEX_HANDOFF.md)** first. It records the November 17, 2026 reconciliation of the fitting list against purchase records, missing parts, conditional selections, ownership evidence, and the newer fuel-tank vent circuits.
+Read **[Home Codex handoff and purchase audit](docs/HOME_CODEX_HANDOFF.md)** first. It records the November 17-18, 2026 reconciliation of the fitting list against purchase records, missing parts, conditional selections, ownership evidence, and the newer fuel-tank vent circuits.
 
 - [Printable whole-car fitting checklist](docs/whole-car-fitting-installation-checklist.pdf)
+- [Amazon dry-sump replacements confirmed November 18](docs/amazon-dry-sump-replacements-2026-11-18.csv)
 - [Summit order quantities](docs/summit-order-8143075.csv)
 - [Supplemental Summit purchase confirmed November 17](docs/summit-supplemental-order-2026-11-17.csv)
 

@@ -1,6 +1,6 @@
 # Home Codex handoff: plumbing and purchase audit
 
-Updated November 17, 2026 (America/Chicago).
+Updated November 18, 2026 (America/Chicago).
 
 ## Start here
 
@@ -39,6 +39,17 @@ Owner provided an order screenshot showing **Ready to Ship**. The order number a
 The five visible lines total $114.05 before any tax or shipping. FRA-229016-BL cumulative ordered quantity is four (three in order 8143075, plus this one). The supplemental fitting is allocated to the oil strainer inlet (OIL5-4), confirmed November 18. This location already showed a 90-degree end. The schematic has three installation positions for this SKU, leaving one of the four ordered fittings without an installation allocation.
 
 FRA-650205 is purchased, but the earlier assertion of direct fit at the master outlet needs verification of the actual mating interface. Preserve this fit check independently of purchasing status.
+
+## Amazon dry-sump replacements confirmed November 18
+
+Owner cannot locate the original DSS tank/catch-can fittings and is uncertain whether they were received. A new Amazon order screenshot confirms the replacements below. Treat these as **ordered, delivery unconfirmed**, not installed or physically on hand. See [replacement purchase CSV](amazon-dry-sump-replacements-2026-11-18.csv).
+
+| Product | Ordered quantity | Installation allocation |
+| --- | --- | --- |
+| AC PERFORMANCE straight male -16 AN flare to male -12 ORB aluminum adapter | 4 individual adapters | OIL1-1 tank bottom outlet; OIL5-9 tank return from XRP strainer; OIL6-1 tank vent; OIL6-5 catch-can/breather inlet |
+| Podavelle -12 ORB O-ring boss socket port plugs, black aluminum | 1 two-pack = 2 plugs | OIL7-1 unused second tank return; OIL7-2 unused second catch-can/breather port |
+
+The screenshot does not show ASINs or manufacturer part numbers. Product identity is recorded by brand, description and size; no Summit SKU or Amazon URL is inferred. The original paid DSS-TFK1 receipt remains valid purchase evidence, but its four adapters/two plugs are **not counted as available extras**. This new order supplies the six installation locations. These -12 ORB plugs are separate from the -8 ORB fuel-hanger plugs and 3/8 NPT Mallory plugs.
 
 ## Outstanding fittings
 
@@ -80,7 +91,7 @@ Exact Amazon IDs for the newly selected vent hose/filter kits were not recorded.
 ## Covered items and ownership corrections
 
 - **HT-010910 fuel-pressure sensor is purchased.** Earlier ownership-unknown wording is superseded by the Haltech evidence. HT-039103 extension kit was ordered from Summit and includes the 18-inch hose, end adapters and clamps. Do not count its three schematic appearances as three kits.
-- **DSS-TFK1 is purchased.** Allocate adapters to tank bottom outlet (OIL1), active tank return from XRP strainer (OIL5), tank vent (OIL6), breather inlet (OIL6). Allocate one -12 ORB plug to unused tank return and one to unused breather port (OIL7). Bare tank ports are -12 ORB; hose-side adapters present male -16 AN.
+- **DSS-TFK1 was purchased, but its fittings are unlocated / receipt uncertain.** The November 18 Amazon replacement order now covers all four adapters and both plugs; see its allocation table above. Do not count the original kit as additional on-hand inventory. Bare tank ports are -12 ORB; adapter hose sides are male -16 AN.
 - **Cooling pump and thermostat:** water pump already has a 90-degree end accepting bare -16 hose. Thermostat has an installed 90-degree MALE -16 AN elbow and still requires its ordered straight female hose end. FRA-220116-BL order quantity 5 = three cooling + two oil suction. Do not reinstate removed SFL-SF92216BLK.
 - **Main tank hanger plugs:** SUM-220228B-8 quantity 3 ordered, one for OUTLET2 on each hanger plus RETURN on the hanger not receiving surge overflow. Verify bare -8 ORB ports. SUM-220840B female -8 AN caps are alternatives only if leaving male AN adapters installed, not three more required closures.
 - **Surge tank:** zero unused-port plugs in current plan. SUPPLY receives first lift; OUTLET2 is custom second lift inlet; OUTLET1 sends DW200 pressure feed; RETURN receives regulator bypass; OVERFLOW goes to one main tank. Preserve the custom-use/internal-passage verification.
