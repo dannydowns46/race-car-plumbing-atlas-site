@@ -3,7 +3,7 @@ FRA-231812-BL,1,each,OIL3 180 degree -12 hose end
 CHH-3516-16AN-B,2,each,Cooling rear hardline adapters
 DER-98450,1,each,Mallory pressure sensor bushing
 FRA-220116-BL,5,each,3 cooling and 2 oil suction straight -16 ends
-SUM-220164B,2,each,Fuel crossover adapters
+SUM-220164B,2,each,Superseded for F07: wrong -10 ORB tank side; actual bungs are -8 ORB; return or reallocation unconfirmed
 SUM-220165B,3,each,Surge OUTLET2 plus Mallory inlet and bypass; no filter replacements allocated
 SUM-220648B,1,each,Mallory rail feed adapter
 SUM-HE2-06-STB,1,each,F06 hanger end
@@ -18,7 +18,7 @@ SUM-220216-25X,2,25 ft per coil,50 ft total for brake and clutch hardlines
 FRA-224516-BL,3,each,OIL5 -16 45 degree ends
 FRA-229010-BL,2,each,OIL4 -10 90 degree ends
 FRA-229016-BL,3,each,OIL5 strainer inlet plus OIL6 vent ends
-SUM-HE2-06-90B,2,each,Rail and surge overflow ends
+SUM-HE2-06-90B,2,each,F04 regulator outlet and F06 surge overflow ends
 SUM-HE2-08-90B,5,each,F01 surge; both F02; both F05
 AAF-ALL60030,1,4 tabs per pack,One tab per wheel
 FRA-229007-BL,1,each,Expansion tank -8 female to -6 hose 90 degree
@@ -26,7 +26,7 @@ FRA-220106-BL,1,each,Heater return hose at pump
 FRA-229012-BL,3,each,OIL2 two ends plus OIL3 cooler end
 SUM-220511,2,each,Clutch hardline tube nuts
 SUM-770945-KIT,1,2 chassis transitions per kit,Use one transition in clutch route; kit includes tab and clip hardware
-SUM-HE2-06-45B,1,each,Mallory regulated outlet hose end
+SUM-HE2-06-45B,1,each,F04 fuel rail inlet hose end
 TIL-TE2089-188L,1,each,Clutch pressure outlet adapter; not reservoir inlet
 WIL-220-6890,4,each,Wheel hardline to flex transitions
 WIL-300-15780,4,each,Wheel transition retaining clips

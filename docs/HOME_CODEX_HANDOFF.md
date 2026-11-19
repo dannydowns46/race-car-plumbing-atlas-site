@@ -51,6 +51,14 @@ Owner cannot locate the original DSS tank/catch-can fittings and is uncertain wh
 
 The screenshot does not show ASINs or manufacturer part numbers. Product identity is recorded by brand, description and size; no Summit SKU or Amazon URL is inferred. The original paid DSS-TFK1 receipt remains valid purchase evidence, but its four adapters/two plugs are **not counted as available extras**. This new order supplies the six installation locations. These -12 ORB plugs are separate from the -8 ORB fuel-hanger plugs and 3/8 NPT Mallory plugs.
 
+## Fuel connection corrections confirmed November 18
+
+- **F07 welded crossover bungs are -8 ORB, not -10 ORB.** Owner measured approximately 0.680 inch inside diameter and confirmed a -8 ORB fitting fits the installed Alucon bungs. Both tanks use this corrected size.
+- **Replacement adapters:** EVIL ENERGY straight male -8 ORB to male -10 AN flare, with O-rings; one Amazon two-pack = two adapters, one per tank. Owner said “I'm buying these” and supplied the product screenshot. Record as **selected / buying; completed order and delivery unconfirmed**. No ASIN or manufacturer part number was visible; do not invent one.
+- **Retain the crossover hose and ends:** SUM-H2-10-10-BLK -10 PTFE hose, recorded 22-inch cut, and two SUM-HE2-10-STB straight -10 AN female hose ends. Connection: -8 ORB welded bung -> EVIL ENERGY adapter -> existing -10 female hose end -> -10 hose.
+- **SUM-220164B quantity 2 remains in the historical Summit order but is superseded for F07.** Its -10 ORB tank-side threads do not fit these bungs. Do not count these adapters as covering the crossover; return/reallocation is not confirmed.
+- **F04 angles corrected:** regulator regulated outlet uses the **90-degree SUM-HE2-06-90B** hose end; fuel rail inlet uses the **45-degree SUM-HE2-06-45B** hose end. The existing SUM-220648B regulator adapter, RUS-644123 rail quick-connect adapter, -6 PTFE hose and 15-inch recorded cut remain unchanged. This swaps the existing hose ends; no additional hose-end quantity is required.
+
 ## Outstanding fittings
 
 Quantities are installation requirements, not an instruction to buy every candidate immediately.
@@ -98,7 +106,7 @@ Exact Amazon IDs for the newly selected vent hose/filter kits were not recorded.
 - **Mallory regulator:** original fittings/plugs all lost. Two ordered SUM-220165B adapters cover upper inlet and lower bypass. SUM-220648B feeds rail from one 3/8 NPT regulated outlet; DER-98450 and Haltech kit use another; purchased EVIL ENERGY 3/8 NPT plug closes third. Second EVIL plug is spare.
 - **Russell RUS-644123 rail adapter:** recorded user-installed; not a missing purchase.
 - **Owned coolant parts:** expansion cap, all required hose clamps, front 35 mm silicone elbows, Aeroflow barb adapters and welded ACE hardline bungs. Verify radiator neck size against the 35 mm elbows.
-- **Fuel tanks:** crossover bungs already welded; both AC PERFORMANCE hangers owned. Do not purchase those again.
+- **Fuel tanks:** Alucon -8 ORB crossover bungs are already welded and owner fit-confirmed; both AC PERFORMANCE hangers owned. Do not purchase those again.
 - **Oil cooler adapters:** two EVIL ENERGY M22x1.5 to -12 AN adapters recorded owned. Dailey filter mount adapters supplied/owned. WIX-57045 filter owned.
 - **Brake supplies ordered:** two ten-packs OPS-F208 = 20 nuts for 16 required; one RUS-R49005 ten-pack = eight washers required; four WIL-220-6890 transitions; one four-tab pack AAF-ALL60030; four WIL-300-15780 clips. Clutch SUM-770945-KIT supplies two transitions; use one in current route.
 - **Hoses:** selected main-system hose SKUs and hose-end quantities match the checked order, apart from conditional adapter items above and the later-added vent circuits. Rigid tubing is TWO 25-foot coils (50 ft total); route lengths remain to be measured.
@@ -113,7 +121,7 @@ Exact Amazon IDs for the newly selected vent hose/filter kits were not recorded.
 
 ## Printed installation guide
 
-[Whole-car fitting installation checklist](whole-car-fitting-installation-checklist.pdf) is US Letter with route IDs, part numbers, sizes/angles, cut or finished hose lengths, checkboxes and note space. It is refreshed for F10/F11 and the confirmed Haltech sensor purchase. It is an installation reference, not proof every item was ordered.
+[Whole-car fitting installation checklist](whole-car-fitting-installation-checklist.pdf) is US Letter with route IDs, part numbers, sizes/angles, cut or finished hose lengths, checkboxes and note space. It includes F10/F11, the confirmed Haltech sensor purchase, Amazon dry-sump replacements, corrected -8 ORB crossover bungs/adapters, and F04 regulator 90-degree / rail 45-degree hose ends. It is an installation reference, not proof every item was ordered.
 
 The owner's annotated fitting and hose-length worksheets were already incorporated into the schematic. The originals remain private; do not upload them or raw receipt PDFs to the public site without reviewing personal information.
 
