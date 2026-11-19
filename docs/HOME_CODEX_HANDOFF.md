@@ -59,12 +59,25 @@ The screenshot does not show ASINs or manufacturer part numbers. Product identit
 - **SUM-220164B quantity 2 remains in the historical Summit order but is superseded for F07.** Its -10 ORB tank-side threads do not fit these bungs. Do not count these adapters as covering the crossover; return/reallocation is not confirmed.
 - **F04 angles corrected:** regulator regulated outlet uses the **90-degree SUM-HE2-06-90B** hose end; fuel rail inlet uses the **45-degree SUM-HE2-06-45B** hose end. The existing SUM-220648B regulator adapter, RUS-644123 rail quick-connect adapter, -6 PTFE hose and 15-inch recorded cut remain unchanged. This swaps the existing hose ends; no additional hose-end quantity is required.
 
+## Lift-pump hanger fittings: latest owner inventory
+
+Owner reports none of the hanger fittings are on hand. Do not count the original hanger-supplied adapters as available. The measured female port ID is approximately 0.689 inch and the owner identifies the ports as ORB, supporting -8 ORB / 3/4-16. Pitch or hand fit on the hangers remains to be checked. This is separate from the explicitly fit-confirmed -8 ORB crossover bungs.
+
+| Installation | Required fitting | Total qty | Purchase / inventory status |
+| --- | --- | ---: | --- |
+| OUTLET1 on each hanger | SUM-220165B: straight -8 ORB male to -8 AN male, O-ring | 2 | **Additional missing adapters; purchase unconfirmed.** The three already ordered are allocated elsewhere. |
+| RETURN on overflow-receiving hanger | SUM-220167B: straight -8 ORB male to -6 AN male, O-ring | 1 | Supplemental Summit purchase confirmed November 17; owner reports not on hand. Check shipment/receipt. |
+| OUTLET2 on both hangers, plus RETURN on other hanger | SUM-220228B-8: -8 ORB male O-ring plug | 3 | Ordered in Summit 8143075 November 13; owner reports not on hand. Check shipment/receipt before buying again. |
+
+Hanger-side hose ends remain SUM-HE2-08-STB (overflow-side OUTLET1, straight), SUM-HE2-08-90B (other OUTLET1, 90 degrees), and SUM-HE2-06-STB (overflow-side RETURN, straight), one each. These were included in the main Summit order. Internal submerged-hose barb sizes still need inspection. The three historical SUM-220165B units cover surge OUTLET2 plus Mallory inlet and bypass; these two hanger adapters bring the definite installation requirement to five, excluding conditional filter adapters.
+
 ## Outstanding fittings
 
 Quantities are installation requirements, not an instruction to buy every candidate immediately.
 
 | Qty | Item / SKU | Installation location | Remaining action |
 | ---: | --- | --- | --- |
+| 2 | SUM-220165B, straight -8 ORB to -8 AN | F01/F02 hanger OUTLET1 | Additional missing adapters; no purchase confirmed. Original supplied fittings are not on hand. Verify hanger pitch / hand fit. |
 | 2 | [Delta M10x1 DIN/ISO bubble tees](https://www.deltaabs.com/products/m10-bubble-tee) | B01/B03 pressure sensor branches before HCU | No purchase found. Sensors are included in the owned Delta kit; tees are separate. Support the tees on the chassis. Owner explicitly retained the Delta tees on November 17. OPS-UT10B-1 is not selected. |
 | Up to 4 | [RUS-R40506](https://www.summitracing.com/parts/rus-r40506), candidate M10x1 banjo bolts | B07-B10, four C6 Z06 calipers | Not ordered. Inspect existing bolts; candidate grip/engagement remains unverified with new hose eyes and washers. |
 | 1 if needed | 1/8 NPT male plug; [SUM-921015](https://www.summitracing.com/parts/sum-921015) was the listed eight-plug kit | OIL7 filter-mount probe/temperature port | Kit not ordered. Only needed if port is open and unused; verify whether a temperature sensor or existing plug occupies it. Owner's 3/8 NPT Mallory plugs are a different size. |
@@ -101,7 +114,7 @@ Exact Amazon IDs for the newly selected vent hose/filter kits were not recorded.
 - **HT-010910 fuel-pressure sensor is purchased.** Earlier ownership-unknown wording is superseded by the Haltech evidence. HT-039103 extension kit was ordered from Summit and includes the 18-inch hose, end adapters and clamps. Do not count its three schematic appearances as three kits.
 - **DSS-TFK1 was purchased, but its fittings are unlocated / receipt uncertain.** The November 18 Amazon replacement order now covers all four adapters and both plugs; see its allocation table above. Do not count the original kit as additional on-hand inventory. Bare tank ports are -12 ORB; adapter hose sides are male -16 AN.
 - **Cooling pump and thermostat:** water pump already has a 90-degree end accepting bare -16 hose. Thermostat has an installed 90-degree MALE -16 AN elbow and still requires its ordered straight female hose end. FRA-220116-BL order quantity 5 = three cooling + two oil suction. Do not reinstate removed SFL-SF92216BLK.
-- **Main tank hanger plugs:** SUM-220228B-8 quantity 3 ordered, one for OUTLET2 on each hanger plus RETURN on the hanger not receiving surge overflow. Verify bare -8 ORB ports. SUM-220840B female -8 AN caps are alternatives only if leaving male AN adapters installed, not three more required closures.
+- **Main tank hanger plugs:** SUM-220228B-8 quantity 3 ordered, one for OUTLET2 on each hanger plus RETURN on the hanger not receiving surge overflow. Owner reports not on hand; check delivery. Measured 0.689-inch port ID supports -8 ORB; verify pitch / hand fit. SUM-220840B caps are not required for the current bare-port plan.
 - **Surge tank:** zero unused-port plugs in current plan. SUPPLY receives first lift; OUTLET2 is custom second lift inlet; OUTLET1 sends DW200 pressure feed; RETURN receives regulator bypass; OVERFLOW goes to one main tank. Preserve the custom-use/internal-passage verification.
 - **Mallory regulator:** original fittings/plugs all lost. Two ordered SUM-220165B adapters cover upper inlet and lower bypass. SUM-220648B feeds rail from one 3/8 NPT regulated outlet; DER-98450 and Haltech kit use another; purchased EVIL ENERGY 3/8 NPT plug closes third. Second EVIL plug is spare.
 - **Russell RUS-644123 rail adapter:** recorded user-installed; not a missing purchase.
@@ -121,7 +134,7 @@ Exact Amazon IDs for the newly selected vent hose/filter kits were not recorded.
 
 ## Printed installation guide
 
-[Whole-car fitting installation checklist](whole-car-fitting-installation-checklist.pdf) is US Letter with route IDs, part numbers, sizes/angles, cut or finished hose lengths, checkboxes and note space. It includes F10/F11, the confirmed Haltech sensor purchase, Amazon dry-sump replacements, corrected -8 ORB crossover bungs/adapters, and F04 regulator 90-degree / rail 45-degree hose ends. It is an installation reference, not proof every item was ordered.
+[Whole-car fitting installation checklist](whole-car-fitting-installation-checklist.pdf) is US Letter with route IDs, part numbers, sizes/angles, cut or finished hose lengths, checkboxes and note space. It includes F10/F11, the confirmed Haltech sensor purchase, Amazon dry-sump replacements, corrected -8 ORB crossover bungs/adapters, F04 regulator 90-degree / rail 45-degree hose ends, and the missing hanger outlet adapters. It is an installation reference, not proof every item was ordered.
 
 The owner's annotated fitting and hose-length worksheets were already incorporated into the schematic. The originals remain private; do not upload them or raw receipt PDFs to the public site without reviewing personal information.
 
